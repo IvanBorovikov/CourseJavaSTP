@@ -1,5 +1,5 @@
 package org.example.Administration;
-import org.example.Person.ClassStudent.Student;
+import org.example.Person.Student.Student;
 
 
 import java.time.LocalDate;
