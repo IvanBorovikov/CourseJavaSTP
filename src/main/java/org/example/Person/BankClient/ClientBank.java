@@ -8,11 +8,11 @@ public class ClientBank extends Person {
     private double amountOfMoneyAccount;
     private double overdraftLimit;
 
-    ClientBank(){
+    public ClientBank(){
         super();
     }
 
-    ClientBank(ClientBank clientBank){
+    public ClientBank(ClientBank clientBank){
         super(clientBank);
         this.phone = clientBank.phone;
         this.bankAccountNumber = clientBank.bankAccountNumber;
@@ -20,7 +20,7 @@ public class ClientBank extends Person {
         this.overdraftLimit = clientBank.overdraftLimit;
     }
 
-    ClientBank(String lastName, String firstName, String middleName, String address,
+    public ClientBank(String lastName, String firstName, String middleName, String address,
                String phone, int bankAccountNumber, double amountOfMoneyAccount,
                double overdraftLimit){
         super(lastName, firstName, middleName, address);

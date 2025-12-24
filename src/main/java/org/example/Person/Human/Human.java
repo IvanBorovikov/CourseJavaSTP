@@ -65,6 +65,7 @@ public class Human extends Person {
         System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);
         System.out.println("Адрес: " + address);
         System.out.println("Пол: " + (male ? "Женский" : "Мужской"));
+        System.out.println("Образование: " + education);
         System.out.println("Возраст: " + age);
 
     }

@@ -2,24 +2,24 @@ package org.example.Person.Teacher;
 
 import org.example.Person.Person;
 
-public class Teachers extends Person {
+public class Teacher extends Person {
     private String post;
     private String department;
     private String object;
 
-    Teachers(){
+    Teacher(){
         super();
     }
 
-    Teachers(Teachers teachers){
-        super(teachers);
-        this.post = teachers.post;
-        this.department = teachers.department;
-        this.object = teachers.object;
+    Teacher(Teacher teacher){
+        super(teacher);
+        this.post = teacher.post;
+        this.department = teacher.department;
+        this.object = teacher.object;
     }
 
-    Teachers(String lastName, String firstName, String middleName, String post,
-             String department, String object){
+    Teacher(String lastName, String firstName, String middleName, String post,
+            String department, String object){
         super(lastName, firstName, middleName, null);
         this.post = post;
         this.department = department;

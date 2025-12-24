@@ -2,23 +2,23 @@ package org.example.Person.Applicant;
 
 import org.example.Person.Person;
 
-public class Applicants extends Person {
+public class Applicant extends Person {
     private String [] subject;
     private int [] ratings;
 
-    Applicants(){
+    Applicant(){
         super();
     }
 
-    Applicants(Applicants a){
+    Applicant(Applicant a){
         super(a);
         this.subject = a.subject;
         this.ratings = a.ratings;
 
     }
 
-    Applicants(String lastName, String firstName, String middleName, String address,
-               String subject, int ratings){
+    Applicant(String lastName, String firstName, String middleName, String address,
+              String subject, int ratings){
         super(lastName, firstName, middleName, address);
         this.subject = new String[]{subject};
         this.ratings = new int[]{ratings};
