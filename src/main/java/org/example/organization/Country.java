@@ -18,7 +18,7 @@ public class Country extends Organization {
         this.lastNameOfPresident = country.lastNameOfPresident;
     }
 
-    Country(String name, Long areaOfTerritory, Long numberOfCitizens, double budget, LocalDate foundationYear, String lastNameOfPresident){
+    Country(String name, Long areaOfTerritory, Long numberOfCitizens, Long budget, int foundationYear, String lastNameOfPresident){
         super(name, foundationYear, budget);
         this.areaOfTerritory = areaOfTerritory;
         this.numberOfCitizens = numberOfCitizens;

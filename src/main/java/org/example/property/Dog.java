@@ -10,11 +10,11 @@ public class Dog {
     private int height;
     private int age;
 
-    Dog(){
+    public Dog(){
 
     }
 
-    Dog(Dog dog){
+    public Dog(Dog dog){
 
         this.nickname = dog.nickname;
         this.breed = dog.breed;
@@ -26,7 +26,7 @@ public class Dog {
         this.age = dog.age;
     }
 
-    Dog(String nickname, String breed, double weight, String ownerLastName,
+    public Dog(String nickname, String breed, double weight, String ownerLastName,
         String color, boolean male, int height, int age){
         this.nickname = nickname;
         this.breed = breed;

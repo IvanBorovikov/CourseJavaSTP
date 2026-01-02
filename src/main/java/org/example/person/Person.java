@@ -1,6 +1,6 @@
 package org.example.person;
 
-public class Person {
+public abstract class Person {
     protected String lastName;
     protected String firstName;
     protected String middleName;
@@ -57,4 +57,6 @@ public class Person {
     public void setAddress(String address) {
         this.address = address;
     }
+
 }
+

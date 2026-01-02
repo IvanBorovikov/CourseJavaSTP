@@ -6,11 +6,11 @@ public class OrderRestaurant extends Order {
     private int tipAmount;
     private boolean cashOrCard;
 
-    OrderRestaurant(){
+    public OrderRestaurant(){
         super();
     }
 
-    OrderRestaurant(OrderRestaurant orderRestaurant){
+    public OrderRestaurant(OrderRestaurant orderRestaurant){
         super(orderRestaurant);
         this.tableNumber = orderRestaurant.tableNumber;
         this.dishName = orderRestaurant.dishName;
@@ -18,8 +18,8 @@ public class OrderRestaurant extends Order {
         this.cashOrCard = orderRestaurant.cashOrCard;
     }
 
-    OrderRestaurant(String serviceProvider, double cost, int tableNumber,
-                    String dishName, int tipAmount, boolean cashOrCard){
+    public OrderRestaurant(String serviceProvider,  int tableNumber,
+                    String dishName, double cost, int tipAmount, boolean cashOrCard){
         super(serviceProvider, cost);
         this.tableNumber = tableNumber;
         this.dishName = dishName;

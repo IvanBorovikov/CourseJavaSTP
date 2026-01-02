@@ -17,8 +17,8 @@ public class FootballTeam extends Organization {
         this.numberOfRegisteredPlayers = footballTeam.numberOfRegisteredPlayers;
     }
 
-    FootballTeam(String name, LocalDate foundationYear, int numberOfPointsScoredInSeason,
-                 int numberOfRegisteredPlayers, double budget){
+    FootballTeam(String name, int foundationYear, int numberOfPointsScoredInSeason,
+                 int numberOfRegisteredPlayers, Long budget){
         super(name, foundationYear, budget);
         this.numberOfPointsScoredInSeason = numberOfPointsScoredInSeason;
         this.numberOfRegisteredPlayers = numberOfRegisteredPlayers;

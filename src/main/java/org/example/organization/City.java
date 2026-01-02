@@ -17,7 +17,7 @@ public class City extends Organization {
         this.lastNameOfGovernor = city.lastNameOfGovernor;
     }
 
-    City(String name, Long numberOfInhabitants, LocalDate foundationYear, String lastNameOfGovernor, double budget){
+    City(String name, Long numberOfInhabitants, int foundationYear, String lastNameOfGovernor, Long budget){
         super(name, foundationYear, budget);
         this.numberOfInhabitants = numberOfInhabitants;
         this.lastNameOfGovernor = lastNameOfGovernor;
@@ -43,7 +43,6 @@ public class City extends Organization {
         System.out.println("Наименование города: " + name);
         System.out.println("Кол-во жителей: " + numberOfInhabitants);
         System.out.println("Дата основания: " + foundationYear);
-        System.out.println("Фамилия губернатора: " + lastNameOfGovernor);
         System.out.println("Фамилия губернатора: " + lastNameOfGovernor);
     }
 }

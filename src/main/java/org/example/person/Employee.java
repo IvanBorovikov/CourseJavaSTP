@@ -7,11 +7,11 @@ public class Employee {
     private int yearOfEmployment;
     private double salary;
 
-    Employee(){
+    public Employee(){
 
     }
 
-    Employee(Employee e){
+    public Employee(Employee e){
         this.lastName = e.lastName;
         this.firstName = e.firstName;
         this.middleName = e.middleName;
@@ -21,7 +21,7 @@ public class Employee {
         this.salary = e.salary;
     }
 
-    Employee(String lastName, String firstName, String middleName, String position,
+    public Employee(String lastName, String firstName, String middleName, String position,
              String department, int yearOfEmployment, int salary){
         this.lastName = lastName;
         this.firstName = firstName;
@@ -81,7 +81,7 @@ public class Employee {
         System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);
         System.out.println("Должность: " + position);
         System.out.println("Подразделение: " + department);
-        System.out.println("Год постуаления на работу: " + yearOfEmployment);
+        System.out.println("Год поступления на работу: " + yearOfEmployment);
         System.out.println("Зарплата: " + salary);
     }
 }

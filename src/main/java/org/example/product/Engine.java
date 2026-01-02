@@ -3,16 +3,16 @@ package org.example.product;
 public class Engine {
     private String manufacture;
     private double power;
-    private int cylinderCapacity;
+    private double cylinderCapacity;
     private boolean engineType;
     private int numberOfValves;
     private int numberOfCylinders;
 
-    Engine(){
+    public Engine(){
 
     }
 
-    Engine(Engine engine){
+    public Engine(Engine engine){
         this.manufacture = engine.manufacture;
         this.power = engine.power;
         this.cylinderCapacity = engine.cylinderCapacity;
@@ -21,7 +21,7 @@ public class Engine {
         this.numberOfCylinders = engine.numberOfCylinders;
     }
 
-    Engine(String manufacture, double power, int cylinderCapacity,
+    public Engine(String manufacture, double power, double cylinderCapacity,
              boolean engineType, int numberOfValves, int numberOfCylinders){
         this.manufacture = manufacture;
         this.power = power;
@@ -39,7 +39,7 @@ public class Engine {
         return power;
     }
 
-    public int getCylinderCapacity() {
+    public double getCylinderCapacity() {
         return cylinderCapacity;
     }
 
@@ -55,7 +55,7 @@ public class Engine {
         return numberOfCylinders;
     }
 
-    public void setCylinderCapacity(int cylinderCapacity) {
+    public void setCylinderCapacity(double cylinderCapacity) {
         this.cylinderCapacity = cylinderCapacity;
     }
 

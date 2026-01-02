@@ -1,20 +1,21 @@
 package org.example.document;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class File  {
     private String title;
     private String fileExtension;
     private double fileSize;
-    private Date dateOfCreation;
+    private LocalDate dateOfCreation;
     private int countAppealFile;
     private boolean editFile;
 
-    File(){
-        super();
+    public File(){
+
     }
 
-    File(File file){
+    public File(File file){
         this.title = file.title;
         this.fileExtension = file.fileExtension;
         this.fileSize = file.fileSize;
@@ -23,8 +24,8 @@ public class File  {
         this.editFile = file.editFile;
     }
 
-    File(String title, String fileExtension, double fileSize,
-         Date dateOfCreation, int countAppealFile, boolean editFile){
+    public File(String title, String fileExtension, double fileSize,
+                LocalDate dateOfCreation, int countAppealFile, boolean editFile){
         this.title = title;
         this.fileExtension = fileExtension;
         this.fileSize = fileSize;
@@ -32,6 +33,8 @@ public class File  {
         this.countAppealFile = countAppealFile;
         this.editFile = editFile;
     }
+
+
 
     public String getTitle() {
         return title;
@@ -49,12 +52,12 @@ public class File  {
         return fileSize;
     }
 
-    public Date getDateOfCreation() {
+    public LocalDate getDateOfCreation() {
         return dateOfCreation;
     }
 
     public int getCountAppealFile() {
-        return countAppealFile;
+        return countAppealFile++;
     }
 
     public boolean isEditFile() {
@@ -69,7 +72,7 @@ public class File  {
         this.fileSize = fileSize;
     }
 
-    public void setDateOfCreation(Date dateOfCreation) {
+    public void setDateOfCreation(LocalDate dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
     }
 
@@ -89,4 +92,5 @@ public class File  {
         System.out.println("Кол-во обращений к файлу: " + countAppealFile);
         System.out.println("Признак возможность редактирования: " + (editFile ? "Разрешено" : "Запрещено"));
     }
+
 }

@@ -1,8 +1,8 @@
 package org.example.naturalObject;
 
 public class Galaxy {
-    private int age;
     private String nameOfTheGalaxy;
+    private Long age;
     private Long distanceFromSolarSystem;
     private Long numberOfStarsGalaxy;
     private double diameterGalaxy;
@@ -19,7 +19,7 @@ public class Galaxy {
         this.diameterGalaxy = galaxy.diameterGalaxy;
     }
 
-    public Galaxy(int age, String nameOfTheGalaxy, Long distanceFromSolarSystem, Long numberOfStarsGalaxy, double diameterGalaxy){
+    public Galaxy(String nameOfTheGalaxy, Long age, Long distanceFromSolarSystem, Long numberOfStarsGalaxy, double diameterGalaxy){
         this.age = age;
         this.nameOfTheGalaxy = nameOfTheGalaxy;
         this.distanceFromSolarSystem = distanceFromSolarSystem;
@@ -27,11 +27,11 @@ public class Galaxy {
         this.diameterGalaxy = diameterGalaxy;
     }
 
-    public int getAge() {
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 

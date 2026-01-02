@@ -1,5 +1,7 @@
 package org.example.document;
 
+import java.time.Year;
+
 public class Book  {
     private String title;
     private String author;
@@ -7,11 +9,11 @@ public class Book  {
     private int yearOfIssue;
     private int numberOfPages;
 
-    Book(){
-        super();
+    public Book(){
+
     }
 
-    Book(Book b){
+    public Book(Book b){
         this.title = b.title;
         this.author = b.author;
         this.publisher = b.publisher;
@@ -19,7 +21,7 @@ public class Book  {
         this.numberOfPages = b.numberOfPages;
     }
 
-    Book(String author, String title, String publisher, int yearOfIssue, int numberOfPages){
+    public Book(String author, String title, String publisher, int yearOfIssue, int numberOfPages){
         this.title = title;
         this.author = author;
         this.publisher = publisher;

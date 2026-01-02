@@ -9,11 +9,11 @@ public class Apartment {
     private String ownerLastName;
 
 
-    Apartment(){
+    public Apartment(){
 
     }
 
-    Apartment(Apartment apartment){
+    public Apartment(Apartment apartment){
         this.ownerLastName = apartment.ownerLastName;
         this.apartmentNumber = apartment.apartmentNumber;
         this.floorNumber = apartment.floorNumber;
@@ -22,7 +22,7 @@ public class Apartment {
         this.livingArea = apartment.livingArea;
     }
 
-    Apartment(int apartmentNumber, int floorNumber, int numberOfRooms,
+    public Apartment(int apartmentNumber, int floorNumber, int numberOfRooms,
               double totalArea, double livingArea, String ownerLastName){
         this.apartmentNumber = apartmentNumber;
         this.floorNumber = floorNumber;

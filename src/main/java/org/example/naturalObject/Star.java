@@ -1,7 +1,8 @@
 package org.example.naturalObject;
 
 public class Star {
-    private int age;
+    private String name;
+    private Long age;
     private double brightness;
     private double diameter;
     private Long distanceFromTheSun;
@@ -12,6 +13,7 @@ public class Star {
     }
 
     public Star(Star star){
+        this.name = star.name;
         this.age = star.age;
         this.brightness = star.brightness;
         this.diameter = star.diameter;
@@ -19,7 +21,8 @@ public class Star {
         this.belongingToTheGalaxy = star.belongingToTheGalaxy;
     }
 
-    public Star(int age, double brightness, double diameter, Long distanceFromTheSun, String belongingToTheGalaxy){
+    public Star(String name, double brightness, double diameter, Long age, Long distanceFromTheSun, String belongingToTheGalaxy){
+        this.name = name;
         this.age = age;
         this.brightness = brightness;
         this.diameter = diameter;
@@ -27,11 +30,19 @@ public class Star {
         this.belongingToTheGalaxy = belongingToTheGalaxy;
     }
 
-    public int getAge() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Long getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Long age) {
         this.age = age;
     }
 
@@ -68,6 +79,7 @@ public class Star {
     }
 
     public void show(){
+        System.out.println("Звезда: " + name);
         System.out.println("Возраст: " + age);
         System.out.println("Яркость: " + brightness);
         System.out.println("Диаметр: " + diameter);

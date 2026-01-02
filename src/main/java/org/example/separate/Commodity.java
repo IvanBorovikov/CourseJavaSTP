@@ -10,11 +10,11 @@ public class Commodity {
     private LocalDate shelfLife;
     private int count;
 
-    Commodity(){
+    public Commodity(){
 
     }
 
-    Commodity(Commodity commodity){
+    public Commodity(Commodity commodity){
         this.name = commodity.name;
         this.manufacturer = commodity.manufacturer;
         this.price = commodity.price;
@@ -23,7 +23,7 @@ public class Commodity {
         this.count = commodity.count;
     }
 
-    Commodity(String name, String manufacturer, double price, double weight,
+    public Commodity(String name, String manufacturer, double price, double weight,
               LocalDate shelfLife, int count){
         this.name = name;
         this.manufacturer = manufacturer;

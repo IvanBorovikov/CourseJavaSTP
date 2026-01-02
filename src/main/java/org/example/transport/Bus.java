@@ -7,7 +7,7 @@ public class Bus {
     private int numberOfTransport;
     private int routeNumber;
     private String stamp;
-    private Year yearOfStartOfOperation;
+    private int yearOfStartOfOperation;
     private int mileage;
 
     public Bus(){
@@ -24,7 +24,7 @@ public class Bus {
     }
 
     public Bus(String lastNameDriver, int numberOfTransport, int routeNumber,
-        String stamp, Year yearOfStartOfOperation, int mileage){
+        String stamp, int yearOfStartOfOperation, int mileage){
         this.lastNameDriver = lastNameDriver;
         this.numberOfTransport = numberOfTransport;
         this.routeNumber = routeNumber;
@@ -49,7 +49,7 @@ public class Bus {
         return stamp;
     }
 
-    public Year getYearOfStartOfOperation() {
+    public int getYearOfStartOfOperation() {
         return yearOfStartOfOperation;
     }
 
@@ -69,7 +69,7 @@ public class Bus {
         this.stamp = stamp;
     }
 
-    public void setYearOfStartOfOperation(Year yearOfStartOfOperation) {
+    public void setYearOfStartOfOperation(int yearOfStartOfOperation) {
         this.yearOfStartOfOperation = yearOfStartOfOperation;
     }
 

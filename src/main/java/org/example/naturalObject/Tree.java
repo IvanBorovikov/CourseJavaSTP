@@ -1,11 +1,11 @@
 package org.example.naturalObject;
 
 public class Tree {
-    private int age;
     private String breed;
     private int height;
     private double trunkGirth;
     private boolean theCullMark;
+    private int age;
 
     public Tree(){
 
@@ -19,7 +19,7 @@ public class Tree {
         this.theCullMark = tree.theCullMark;
     }
 
-    public Tree(int age, String breed, int height, double trunkGirth, boolean theCullMark){
+    public Tree(String breed, int height, double trunkGirth, boolean theCullMark, int age){
         this.age = age;
         this.breed = breed;
         this.height = height;
@@ -68,10 +68,10 @@ public class Tree {
     }
 
     public void show(){
-        System.out.println("Возраст: " + age);
         System.out.println("Порода: " + breed);
         System.out.println("Высота: " + height);
         System.out.println("Обхват ствола: " + trunkGirth);
-        System.out.println("Отметка о выбраковке: " + (theCullMark ? "Нет" : "Да"));
+        System.out.println("Отметка о выбраковке: " + (theCullMark ? "Да" : "Нет"));
+        System.out.println("Возраст: " + age);
     }
 }

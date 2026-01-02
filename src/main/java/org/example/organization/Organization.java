@@ -4,8 +4,8 @@ import java.time.LocalDate;
 
 public class Organization {
     protected String name;
-    protected LocalDate foundationYear;
-    protected double budget;
+    protected int foundationYear;
+    protected Long budget;
 
     protected Organization(){
     }
@@ -16,7 +16,7 @@ public class Organization {
         this.budget = organization.budget;
     }
 
-    protected Organization(String name, LocalDate foundationYear, double budget){
+    protected Organization(String name, int foundationYear, Long budget){
         this.name = name;
         this.foundationYear = foundationYear;
         this.budget = budget;
@@ -26,11 +26,11 @@ public class Organization {
         return name;
     }
 
-    public LocalDate getFoundationYear() {
+    public int getFoundationYear() {
         return foundationYear;
     }
 
-    public double getBudget() {
+    public Long getBudget() {
         return budget;
     }
 
@@ -38,11 +38,11 @@ public class Organization {
         this.name = name;
     }
 
-    public void setFoundationYear(LocalDate foundationYear) {
+    public void setFoundationYear(int foundationYear) {
         this.foundationYear = foundationYear;
     }
 
-    public void setBudget(double budget) {
+    public void setBudget(Long budget) {
         this.budget = budget;
     }
 }

@@ -2,12 +2,12 @@ package org.example.transport;
 
 public class Wagon {
     private String typeOfCarriage;
-    private int numberOfTransport;
+    private String numberOfTransport;
     private int numberSeats;
     private String conductorName;
-    private int trainNumber;
+    private String trainNumber;
     private boolean isConditioner;
-    private String operationPeriod;
+    private int operationPeriod;
 
     public Wagon(){
 
@@ -23,8 +23,8 @@ public class Wagon {
         this.operationPeriod = wagon.operationPeriod;
     }
 
-    public Wagon(String typeOfCarriage, int numberOfTransport, int numberSeats, String conductorName,
-          int trainNumber, boolean isConditioner, String operationPeriod){
+    public Wagon(String typeOfCarriage, String numberOfTransport, int numberSeats, String conductorName,
+          String trainNumber, boolean isConditioner, int operationPeriod){
         this.typeOfCarriage = typeOfCarriage;
         this.numberOfTransport = numberOfTransport;
         this.numberSeats = numberSeats;
@@ -34,7 +34,7 @@ public class Wagon {
         this.operationPeriod = operationPeriod;
     }
 
-    public int getNumberOfTransport() {
+    public String getNumberOfTransport() {
         return numberOfTransport;
     }
 
@@ -63,11 +63,11 @@ public class Wagon {
         this.conductorName = conductorName;
     }
 
-    public int getTrainNumber() {
+    public String getTrainNumber() {
         return trainNumber;
     }
 
-    public void setTrainNumber(int trainNumber) {
+    public void setTrainNumber(String trainNumber) {
         this.trainNumber = trainNumber;
     }
 
@@ -79,25 +79,25 @@ public class Wagon {
         isConditioner = conditioner;
     }
 
-    public String getOperationPeriod() {
+    public int getOperationPeriod() {
         return operationPeriod;
     }
 
-    public void setOperationPeriod(String operationPeriod) {
+    public void setOperationPeriod(int operationPeriod) {
         this.operationPeriod = operationPeriod;
     }
 
-    public void setNumberOfTransport(int numberOfTransport) {
+    public void setNumberOfTransport(String numberOfTransport) {
         this.numberOfTransport = numberOfTransport;
     }
 
     public void show(){
-        System.out.println("Тип вагона " + typeOfCarriage);
+        System.out.println("Тип вагона: " + typeOfCarriage);
         System.out.println("Номер вагона: " + numberOfTransport);
         System.out.println("число мест в вагоне: " + numberSeats);
         System.out.println("Фамилия проводника: " + conductorName);
         System.out.println("Номер поезда: " + trainNumber);
-        System.out.println("Наличие кондиционера: " + isConditioner);
+        System.out.println("Наличие кондиционера: " + (isConditioner ? "Да" : "Нет"));
         System.out.println("Срок эксплуатации вагона: " + operationPeriod);
     }
 }

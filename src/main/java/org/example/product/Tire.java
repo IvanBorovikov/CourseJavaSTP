@@ -3,15 +3,15 @@ package org.example.product;
 public class Tire {
     private String manufacturer;
     private boolean tireType;
-    private double radius;
-    private double expectedMileage;
+    private int radius;
+    private int expectedMileage;
     private boolean newOrBu;
 
-    Tire(){
+    public Tire(){
 
     }
 
-    Tire(Tire tire){
+    public Tire(Tire tire){
         this.manufacturer = tire.manufacturer;
         this.tireType = tire.tireType;
         this.radius = tire.radius;
@@ -19,8 +19,8 @@ public class Tire {
         this.newOrBu = tire.newOrBu;
     }
 
-    Tire(String manufacturer, boolean tireType, double radius,
-         double expectedMileage, boolean newOrBu){
+    public Tire(String manufacturer, boolean tireType, int radius,
+         int expectedMileage, boolean newOrBu){
         this.manufacturer = manufacturer;
         this.tireType = tireType;
         this.radius = radius;
@@ -32,8 +32,12 @@ public class Tire {
         return tireType;
     }
 
-    public double getRadius() {
+    public int getRadius() {
         return radius;
+    }
+
+    public int getExpectedMileage() {
+        return expectedMileage;
     }
 
     public boolean isNewOrBu() {
@@ -44,12 +48,16 @@ public class Tire {
         this.tireType = tireType;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(int radius) {
         this.radius = radius;
     }
 
     public void setNewOrBu(boolean newOrBu) {
         this.newOrBu = newOrBu;
+    }
+
+    public void setExpectedMileage(int expectedMileage) {
+        this.expectedMileage = expectedMileage;
     }
 
     public void show(){

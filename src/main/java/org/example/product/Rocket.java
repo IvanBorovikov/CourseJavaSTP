@@ -2,11 +2,11 @@ package org.example.product;
 
 public class Rocket {
     private String manufacturer;
-    private double enginePower;
+    private int enginePower;
     private int range;
-    private double guaranteedAccuracyInMeters;
+    private int guaranteedAccuracyInMeters;
     private int numberOfWarheads;
-    private double warheadPower;
+    private int warheadPower;
 
     public Rocket(){
 
@@ -21,8 +21,8 @@ public class Rocket {
         this.warheadPower = rocket.warheadPower;
     }
 
-    public Rocket(String manufacturer, double enginePower, int range,
-           double guaranteedAccuracyInMeters, int numberOfWarheads, double warheadPower){
+    public Rocket(String manufacturer, int   enginePower, int range,
+           int guaranteedAccuracyInMeters, int numberOfWarheads, int warheadPower){
         this.manufacturer = manufacturer;
         this.enginePower = enginePower;
         this.range = range;
@@ -35,7 +35,7 @@ public class Rocket {
         return manufacturer;
     }
 
-    public double getPower() {
+    public int getPower() {
         return enginePower;
     }
 
@@ -43,7 +43,7 @@ public class Rocket {
         return range;
     }
 
-    public double getGuaranteedAccuracyInMeters() {
+    public int getGuaranteedAccuracyInMeters() {
         return guaranteedAccuracyInMeters;
     }
 
@@ -51,7 +51,7 @@ public class Rocket {
         return numberOfWarheads;
     }
 
-    public double getWarheadPower() {
+    public int getWarheadPower() {
         return warheadPower;
     }
 
@@ -59,7 +59,7 @@ public class Rocket {
         this.range = range;
     }
 
-    public void setGuaranteedAccuracyInMeters(double guaranteedAccuracyInMeters) {
+    public void setGuaranteedAccuracyInMeters(int guaranteedAccuracyInMeters) {
         this.guaranteedAccuracyInMeters = guaranteedAccuracyInMeters;
     }
 
@@ -67,7 +67,7 @@ public class Rocket {
         this.numberOfWarheads = numberOfWarheads;
     }
 
-    public void setWarheadPower(double warheadPower) {
+    public void setWarheadPower(int warheadPower) {
         this.warheadPower = warheadPower;
     }
 
@@ -75,7 +75,7 @@ public class Rocket {
         this.manufacturer = manufacturer;
     }
 
-    public void setPower(double enginePower) {
+    public void setPower(int enginePower) {
         this.enginePower = enginePower;
     }
 

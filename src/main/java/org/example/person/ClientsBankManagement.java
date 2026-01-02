@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.person.ClientBank;
+package org.example.person;
 
 import java.util.ArrayList;
 

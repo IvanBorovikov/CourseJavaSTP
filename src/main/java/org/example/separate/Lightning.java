@@ -1,18 +1,18 @@
 package org.example.separate;
 
 public class Lightning {
-    private int lightningId;
+    private String lightningId;
     private int zipperLength;
     private double dischargePower;
     private double distanceFromObserver;
     private double dischargeDuration;
     private String lastNameObserver;
 
-    Lightning(){
+    public Lightning(){
 
     }
 
-    Lightning(Lightning lightning){
+    public Lightning(Lightning lightning){
         this.lightningId = lightning.lightningId;
         this.zipperLength = lightning.zipperLength;
         this.dischargePower = lightning.dischargePower;
@@ -21,7 +21,7 @@ public class Lightning {
         this.lastNameObserver = lightning.lastNameObserver;
     }
 
-    Lightning(int lightningId, int zipperLength, double dischargePower,
+    public Lightning(String lightningId, int zipperLength, double dischargePower,
               double distanceFromObserver, double dischargeDuration, String lastNameObserver){
         this.lightningId = lightningId;
         this.zipperLength = zipperLength;
@@ -31,7 +31,7 @@ public class Lightning {
         this.lastNameObserver = lastNameObserver;
     }
 
-    public int getLightningId() {
+    public String getLightningId() {
         return lightningId;
     }
 
@@ -55,7 +55,7 @@ public class Lightning {
         return lastNameObserver;
     }
 
-    public void setLightningId(int lightningId) {
+    public void setLightningId(String lightningId) {
         this.lightningId = lightningId;
     }
 

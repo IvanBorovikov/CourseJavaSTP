@@ -1,17 +1,19 @@
 package org.example.separate;
 
+import java.time.LocalTime;
+
 public class ResultRunners {
     private String lastNameOfTheAthlete;
     private String country;
     private int age;
-    private int raceDistance;
-    private boolean result;
+    private double raceDistance;
+    private LocalTime result;
 
-    ResultRunners(){
+    public ResultRunners(){
 
     }
 
-    ResultRunners(ResultRunners resultRunners){
+    public ResultRunners(ResultRunners resultRunners){
         this.lastNameOfTheAthlete = resultRunners.lastNameOfTheAthlete;
         this.country = resultRunners.country;
         this.age = resultRunners.age;
@@ -19,8 +21,8 @@ public class ResultRunners {
         this.result = resultRunners.result;
     }
 
-    ResultRunners(String lastNameOfTheAthlete, String country, int age, int raceDistance,
-                  boolean result){
+    public ResultRunners(String lastNameOfTheAthlete, String country, int age, double raceDistance,
+                         LocalTime result){
         this.lastNameOfTheAthlete = lastNameOfTheAthlete;
         this.country = country;
         this.age = age;
@@ -40,11 +42,11 @@ public class ResultRunners {
         return age;
     }
 
-    public int getRaceDistance() {
+    public double getRaceDistance() {
         return raceDistance;
     }
 
-    public boolean isResult() {
+    public LocalTime getResult() {
         return result;
     }
 
@@ -60,11 +62,11 @@ public class ResultRunners {
         this.age = age;
     }
 
-    public void setRaceDistance(int raceDistance) {
+    public void setRaceDistance(double raceDistance) {
         this.raceDistance = raceDistance;
     }
 
-    public void setResult(boolean result) {
+    public void setResult(LocalTime result) {
         this.result = result;
     }
 
@@ -73,6 +75,6 @@ public class ResultRunners {
         System.out.println("Страна: " + country);
         System.out.println("Возраст спортсмена: " + age);
         System.out.println("Дистанция забега: " + raceDistance);
-        System.out.println("Результат: " + (result ? "Успех" : "Провален"));
+        System.out.println("Результат: " + result);
     }
 }

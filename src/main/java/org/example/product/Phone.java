@@ -6,7 +6,7 @@ public class Phone {
     private int memoryCapacity;
     private String bodyColor;
     private double screenDiagonal;
-    private double batteryCapacity;
+    private int batteryCapacity;
 
 
     public Phone(){
@@ -23,7 +23,7 @@ public class Phone {
     }
 
     public Phone(String manufacturer, String model, int memoryCapacity, String bodyColor,
-          double screenDiagonal, double batteryCapacity){
+          double screenDiagonal, int batteryCapacity){
         this.manufacturer = manufacturer;
         this.model = model;
         this.memoryCapacity = memoryCapacity;
@@ -37,7 +37,7 @@ public class Phone {
         return manufacturer;
     }
 
-    public double getBatteryCapacity() {
+    public int getBatteryCapacity() {
         return batteryCapacity;
     }
 
@@ -77,7 +77,7 @@ public class Phone {
         this.manufacturer = manufacture;
     }
 
-    public void setBatteryCapacity(double batteryCapacity) {
+    public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
     }
 

@@ -4,16 +4,16 @@ import java.sql.Time;
 
 public class Tornado {
     private String hurricaneCategory;
-    private Time duration;
+    private int duration;
     private double height;
     private String lastNameOfTheObserver;
     private boolean landOrSurface;
 
-    Tornado(){
+    public Tornado(){
 
     }
 
-    Tornado(Tornado tornado){
+    public Tornado(Tornado tornado){
         this.hurricaneCategory = tornado.hurricaneCategory;
         this.duration = tornado.duration;
         this.height = tornado.height;
@@ -21,7 +21,7 @@ public class Tornado {
         this.landOrSurface = tornado.landOrSurface;
     }
 
-    Tornado(String hurricaneCategory, Time duration, double height,
+    public Tornado(String hurricaneCategory, int duration, double height,
             String lastNameOfTheObserver, boolean landOrSurface){
         this.hurricaneCategory = hurricaneCategory;
         this.duration = duration;
@@ -34,7 +34,7 @@ public class Tornado {
         return hurricaneCategory;
     }
 
-    public Time getDuration() {
+    public int getDuration() {
         return duration;
     }
 
@@ -54,7 +54,7 @@ public class Tornado {
         this.hurricaneCategory = hurricaneCategory;
     }
 
-    public void setDuration(Time duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
     }
 

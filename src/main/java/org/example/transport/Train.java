@@ -3,17 +3,17 @@ package org.example.transport;
 public class Train {
     private String destination; // Пункт назначения
     private String departurePoint; // Пункт отправления
-    private int numberOfTransport;
+    private String numberOfTransport;
     private int routeLength;
     private int numberOfCommonPlaces;
     private int numberOfCompartments;
     private int numberOfReservedSeats;
 
-    Train(){
+    public Train(){
 
     }
 
-    Train(Train train){
+    public Train(Train train){
         this.departurePoint = train.departurePoint;
         this.destination = train.destination;
         this.numberOfTransport = train.numberOfTransport;
@@ -23,7 +23,7 @@ public class Train {
         this.numberOfReservedSeats = train.numberOfReservedSeats;
     }
 
-    Train(String departurePoint, String destination, int numberOfTransport,
+    public Train(String departurePoint, String destination, String numberOfTransport,
           int routeLength, int numberOfCommonPlaces, int numberOfCompartments,
           int numberOfReservedSeats){
 
@@ -36,7 +36,7 @@ public class Train {
         this.numberOfReservedSeats = numberOfReservedSeats;
     }
 
-    public int getNumberOfTransport() {
+    public String getNumberOfTransport() {
         return numberOfTransport;
     }
 
@@ -88,7 +88,7 @@ public class Train {
         this.numberOfReservedSeats = numberOfReservedSeats;
     }
 
-    public void setNumberOfTransport(int numberOfTransport) {
+    public void setNumberOfTransport(String numberOfTransport) {
         this.numberOfTransport = numberOfTransport;
     }
 

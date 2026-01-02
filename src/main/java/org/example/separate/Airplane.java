@@ -3,12 +3,14 @@ package org.example.separate;
 public class Airplane {
     private String departurePoint; // Пункт отправления
     private String destination; // Пункт направления
-    private int flightNumber;
+    private String flightNumber;
     private int countPassengers;
     private String departureWeekday; //день недели вылета
     private String arrivalWeekday; // день недели прилета
 
-    Airplane(Airplane a){
+    public Airplane(){}
+
+    public Airplane(Airplane a){
         this.departurePoint = a.departurePoint;
         this.destination = a.destination;
         this.flightNumber = a.flightNumber;
@@ -17,7 +19,7 @@ public class Airplane {
         this.arrivalWeekday = a.arrivalWeekday;
     }
 
-    Airplane(String departurePoint, String destination, int flightNumber,
+    public Airplane(String departurePoint, String destination, String flightNumber,
              int countPassengers, String departureWeekday, String arrivalWeekday){
         this.departurePoint = departurePoint;
         this.destination = destination;
@@ -44,11 +46,11 @@ public class Airplane {
         this.destination = destination;
     }
 
-    public int getFlightNumber() {
+    public String getFlightNumber() {
         return flightNumber;
     }
 
-    public void setFlightNumber(int flightNumber) {
+    public void setFlightNumber(String flightNumber) {
         this.flightNumber = flightNumber;
     }
 

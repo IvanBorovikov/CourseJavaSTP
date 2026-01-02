@@ -4,13 +4,13 @@ public class OrderTaxi extends Order {
     private String departurePoint; // Пункт отправления
     private String destination; // Пункт прибытия
     private int numberCar;
-    private int routeLength;
+    private double routeLength;
 
-    OrderTaxi(){
+    public OrderTaxi(){
         super();
     }
 
-    OrderTaxi(OrderTaxi orderTaxi){
+    public OrderTaxi(OrderTaxi orderTaxi){
         super(orderTaxi);
         this.departurePoint = orderTaxi.departurePoint;
         this.destination = orderTaxi.destination;
@@ -18,8 +18,8 @@ public class OrderTaxi extends Order {
         this.routeLength = orderTaxi.routeLength;
     }
 
-    OrderTaxi(String serviceProvider, double cost, String departurePoint,
-              String destination, int numberCar, int routeLength){
+    public OrderTaxi(String serviceProvider, String departurePoint,
+              String destination, int numberCar, double cost, double routeLength){
         super(serviceProvider, cost);
         this.departurePoint = departurePoint;
         this.destination = destination;
@@ -40,7 +40,7 @@ public class OrderTaxi extends Order {
         return numberCar;
     }
 
-    public int getRouteLength() {
+    public double getRouteLength() {
         return routeLength;
     }
 
@@ -56,7 +56,7 @@ public class OrderTaxi extends Order {
         this.numberCar = numberCar;
     }
 
-    public void setRouteLength(int routeLength) {
+    public void setRouteLength(double routeLength) {
         this.routeLength = routeLength;
     }
 

@@ -6,18 +6,18 @@ public class Patient extends Person {
     private String diagnosis;
     private String lastNameOfTheAttendingPhysician;
 
-    Patient(){
+    public Patient(){
         super();
     }
 
-    Patient(Patient patient){
+    public Patient(Patient patient){
         super(patient);
         this.medicalCardNumber = patient.medicalCardNumber;
         this.diagnosis = patient.diagnosis;
         this.lastNameOfTheAttendingPhysician = patient.lastNameOfTheAttendingPhysician;
     }
 
-    Patient(String lastName, String firstName, String middleName,
+    public Patient(String lastName, String firstName, String middleName,
             String address, int medicalCardNumber, String diagnosis, String lastNameOfTheAttendingPhysician){
         super(lastName, firstName, middleName, address);
         this.medicalCardNumber = medicalCardNumber;

@@ -5,17 +5,17 @@ import java.time.Year;
 
 public class FerrisWheel {
     private String nameWheel;
-    private String wheelHeight;
-    private Time theDurationOfCompleteRevolution;
+    private int wheelHeight;
+    private int theDurationOfCompleteRevolution;
     private int numberOfSeats;
     private String nameOwner;
-    private Year yearOfConstruction;
+    private int yearOfConstruction;
 
-    FerrisWheel(){
+    public FerrisWheel(){
 
     }
 
-    FerrisWheel(FerrisWheel ferrisWheel){
+    public FerrisWheel(FerrisWheel ferrisWheel){
         this.nameWheel = ferrisWheel.nameWheel;
         this.wheelHeight = ferrisWheel.wheelHeight;
         this.theDurationOfCompleteRevolution = ferrisWheel.theDurationOfCompleteRevolution;
@@ -24,8 +24,8 @@ public class FerrisWheel {
         this.yearOfConstruction = ferrisWheel.yearOfConstruction;
     }
 
-    FerrisWheel(String nameWheel, String wheelHeight, Time theDurationOfCompleteRevolution,
-                int numberOfSeats, String nameOwner, Year yearOfConstruction){
+    public FerrisWheel(String nameWheel, int wheelHeight, int theDurationOfCompleteRevolution,
+                int numberOfSeats, String nameOwner, int yearOfConstruction){
         this.nameWheel = nameWheel;
         this.wheelHeight = wheelHeight;
         this.theDurationOfCompleteRevolution = theDurationOfCompleteRevolution;
@@ -38,11 +38,11 @@ public class FerrisWheel {
         return nameWheel;
     }
 
-    public String getWheelHeight() {
+    public int getWheelHeight() {
         return wheelHeight;
     }
 
-    public Time getTheDurationOfCompleteRevolution() {
+    public int getTheDurationOfCompleteRevolution() {
         return theDurationOfCompleteRevolution;
     }
 
@@ -54,7 +54,7 @@ public class FerrisWheel {
         return nameOwner;
     }
 
-    public Year getYearOfConstruction() {
+    public int getYearOfConstruction() {
         return yearOfConstruction;
     }
 
@@ -62,11 +62,11 @@ public class FerrisWheel {
         this.nameWheel = nameWheel;
     }
 
-    public void setWheelHeight(String wheelHeight) {
+    public void setWheelHeight(int wheelHeight) {
         this.wheelHeight = wheelHeight;
     }
 
-    public void setTheDurationOfCompleteRevolution(Time theDurationOfCompleteRevolution) {
+    public void setTheDurationOfCompleteRevolution(int theDurationOfCompleteRevolution) {
         this.theDurationOfCompleteRevolution = theDurationOfCompleteRevolution;
     }
 
@@ -78,7 +78,7 @@ public class FerrisWheel {
         this.nameOwner = nameOwner;
     }
 
-    public void setYearOfConstruction(Year yearOfConstruction) {
+    public void setYearOfConstruction(int yearOfConstruction) {
         this.yearOfConstruction = yearOfConstruction;
     }
 

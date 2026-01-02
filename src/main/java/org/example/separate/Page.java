@@ -8,11 +8,11 @@ public class Page {
     private int pageNumber;
     private int numberOfRows;
 
-    Page(){
+    public Page(){
 
     }
 
-    Page(Page page){
+    public Page(Page page){
         this.numberOfLetters = page.numberOfLetters;
         this.numberOfVowels = page.numberOfVowels;
         this.fontSize = page.fontSize;
@@ -21,7 +21,7 @@ public class Page {
         this.numberOfRows = page.numberOfRows;
     }
 
-    Page(int numberOfLetters, int numberOfVowels, int fontSize, int numberOfParagraphs,
+    public Page(int numberOfLetters, int numberOfVowels, int fontSize, int numberOfParagraphs,
          int pageNumber, int numberOfRows){
         this.numberOfLetters = numberOfLetters;
         this.numberOfVowels = numberOfVowels;

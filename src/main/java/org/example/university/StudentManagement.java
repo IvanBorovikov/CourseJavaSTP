@@ -4,7 +4,7 @@ package org.example.university;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class StudentManagement {
+public abstract class StudentManagement {
     public static ArrayList<Student> students = new ArrayList<>();
 
     public static void showFaculty(String faculty){
