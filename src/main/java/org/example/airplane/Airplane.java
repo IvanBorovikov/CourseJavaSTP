@@ -1,4 +1,4 @@
-package org.example.separate;
+package org.example.airplane;
 
 public class Airplane {
     private String departurePoint; // Пункт отправления

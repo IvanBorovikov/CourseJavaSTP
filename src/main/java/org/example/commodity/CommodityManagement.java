@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.separate.Commodity;
+package org.example.commodity;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

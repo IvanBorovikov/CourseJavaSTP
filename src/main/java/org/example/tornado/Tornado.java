@@ -1,6 +1,4 @@
-package org.example.separate;
-
-import java.sql.Time;
+package org.example.tornado;
 
 public class Tornado {
     private String hurricaneCategory;

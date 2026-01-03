@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.separate.Page;
+package org.example.page;
 
 import java.util.ArrayList;
 import java.util.List;

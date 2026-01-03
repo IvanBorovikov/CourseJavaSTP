@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.separate.Lightning;
+package org.example.lighting;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,5 @@
-package org.example.administration;
+package org.example.wheel;
 
-import org.example.separate.FerrisWheel;
-
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 

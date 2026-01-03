@@ -1,4 +1,4 @@
-package org.example.separate;
+package org.example.lighting;
 
 public class Lightning {
     private String lightningId;

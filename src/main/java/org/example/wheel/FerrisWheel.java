@@ -1,7 +1,4 @@
-package org.example.separate;
-
-import java.sql.Time;
-import java.time.Year;
+package org.example.wheel;
 
 public class FerrisWheel {
     private String nameWheel;

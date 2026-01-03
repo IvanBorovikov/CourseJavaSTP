@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.separate.Airplane;
+package org.example.airplane;
 
 import java.util.ArrayList;
 import java.util.List;

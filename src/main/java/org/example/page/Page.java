@@ -1,4 +1,4 @@
-package org.example.separate;
+package org.example.page;
 
 public class Page {
     private int numberOfLetters;

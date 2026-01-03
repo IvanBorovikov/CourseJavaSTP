@@ -1,4 +1,4 @@
-package org.example.separate;
+package org.example.commodity;
 
 import java.time.LocalDate;
 

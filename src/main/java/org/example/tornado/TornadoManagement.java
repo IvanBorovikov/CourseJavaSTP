@@ -1,6 +1,4 @@
-package org.example.administration;
-
-import org.example.separate.Tornado;
+package org.example.tornado;
 
 import java.util.ArrayList;
 import java.util.List;
