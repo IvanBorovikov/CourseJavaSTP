@@ -3,9 +3,9 @@ package org.example.naturalObject;
 public class Galaxy {
     private String nameOfTheGalaxy;
     private Long age;
-    private Long distanceFromSolarSystem;
-    private Long numberOfStarsGalaxy;
-    private double diameterGalaxy;
+    private Long distanceFromSolarSystem; // расстояние от нее до солнечной системы
+    private Long numberOfStarsGalaxy; // количество звезд в галактике
+    private double diameterGalaxy; // диаметр галактики
 
    public Galaxy(){
 
@@ -20,6 +20,9 @@ public class Galaxy {
     }
 
     public Galaxy(String nameOfTheGalaxy, Long age, Long distanceFromSolarSystem, Long numberOfStarsGalaxy, double diameterGalaxy){
+       if (nameOfTheGalaxy == null){
+           throw new IllegalArgumentException("nameOfTheGalaxy");
+       }
         this.age = age;
         this.nameOfTheGalaxy = nameOfTheGalaxy;
         this.distanceFromSolarSystem = distanceFromSolarSystem;
@@ -65,5 +68,13 @@ public class Galaxy {
 
     public void setDiameterGalaxy(double diameterGalaxy) {
         this.diameterGalaxy = diameterGalaxy;
+    }
+
+    public void show(){
+        System.out.println("Наименование галактики: " + nameOfTheGalaxy);
+        System.out.println("Возраст галактики: " + age);
+        System.out.println("Расстояние от галактики до солнечной системы: " + distanceFromSolarSystem);
+        System.out.println("Количество звезд в галактике: " + numberOfStarsGalaxy);
+        System.out.println("Диаметр галактики: " + diameterGalaxy);
     }
 }

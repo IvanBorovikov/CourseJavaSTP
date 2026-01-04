@@ -6,21 +6,29 @@ public class GalaxyManagement {
 
     public static ArrayList<Galaxy> galaxies = new ArrayList<>();
 
+    /*
+    а) вывод списка галактик, просуществовавших дольше указанного времени и расположенных от солнечной системы дальше указанного расстояния;
+     */
     public static void findGalaxiesOlderAndFurtherThan(Long age, Long distance){
+        System.out.printf("Галактики просуществовавшие дольше указанного времени: %d", age);
+        System.out.printf("И расположенных от солнечной системы дальше указанного расстояния: %d\n", distance);
         for (Galaxy g : galaxies){
             if (g.getAge() > age && g.getDistanceFromSolarSystem() > distance){
-                String str = String.format("Галактики просуществовавшие дольше: %s", g.getNameOfTheGalaxy());
-                System.out.println(str);
+                g.show();
                 System.out.println();
             }
         }
     }
 
+    /*
+    б) вывод списка галактик, содержащих звезд меньше, чем указано и имеющих диаметр меньше указанного.
+     */
     public static void findSmallAndSparseGalaxies(Long numberStar, double diameter){
+        System.out.printf("Галактики содержащие звезд меньше, чем указано: %d", numberStar);
+        System.out.printf("И имеющие диаметр меньше указанного: %.2f\n", diameter);
         for (Galaxy g : galaxies){
             if (g.getNumberOfStarsGalaxy() < numberStar && g.getDiameterGalaxy() < diameter){
-                String str = String.format("Галактики с меньшим кол-во звезд и диаметром: %s", g.getNameOfTheGalaxy());
-                System.out.println(str);
+                g.show();
                 System.out.println();
             }
         }
