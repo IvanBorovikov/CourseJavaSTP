@@ -2,12 +2,33 @@ package org.example.commodity;
 
 import java.time.LocalDate;
 
+/*
+8.	Класс Товар.
+ */
 public class Commodity {
+    /*
+    наименование
+     */
     private String name;
+    /*
+    производитель
+     */
     private String manufacturer;
+    /*
+    цена
+     */
     private double price;
+    /*
+    вес
+     */
     private double weight;
+    /*
+    срок хранения
+     */
     private LocalDate shelfLife;
+    /*
+    количество
+     */
     private int count;
 
     public Commodity(){
@@ -25,6 +46,14 @@ public class Commodity {
 
     public Commodity(String name, String manufacturer, double price, double weight,
               LocalDate shelfLife, int count){
+        if (name == null){
+            throw new IllegalArgumentException("name");
+        }
+
+        if (manufacturer == null){
+            throw new IllegalArgumentException("manufacturer");
+        }
+
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
