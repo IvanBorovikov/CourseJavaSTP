@@ -2,11 +2,11 @@ package org.example.lighting;
 
 public class Lightning {
     private String lightningId;
-    private int zipperLength;
-    private double dischargePower;
-    private double distanceFromObserver;
-    private double dischargeDuration;
-    private String lastNameObserver;
+    private int zipperLength; //длина молнии
+    private double dischargePower; //мощность разряда
+    private double distanceFromObserver; //удаленность от наблюдателя
+    private double dischargeDuration; //длительность разряда
+    private String lastNameObserver; // фамилия наблюдателя
 
     public Lightning(){
 
@@ -23,6 +23,13 @@ public class Lightning {
 
     public Lightning(String lightningId, int zipperLength, double dischargePower,
               double distanceFromObserver, double dischargeDuration, String lastNameObserver){
+        if (lightningId == null){
+            throw new IllegalArgumentException("lightningId");
+        }
+
+        if (lastNameObserver == null){
+            throw new IllegalArgumentException("lastNameObserver");
+        }
         this.lightningId = lightningId;
         this.zipperLength = zipperLength;
         this.dischargePower = dischargePower;
