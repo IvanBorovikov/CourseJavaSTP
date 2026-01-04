@@ -1,54 +1,53 @@
 package org.example.document;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class File  {
-    private String title;
+    private String name;
     private String fileExtension;
-    private double fileSize;
+    private int fileSize;
     private LocalDate dateOfCreation;
     private int countAppealFile;
-    private boolean editFile;
+    private boolean editable;
 
     public File(){
 
     }
 
     public File(File file){
-        this.title = file.title;
+        this.name = file.name;
         this.fileExtension = file.fileExtension;
         this.fileSize = file.fileSize;
         this.dateOfCreation = file.dateOfCreation;
         this.countAppealFile = file.countAppealFile;
-        this.editFile = file.editFile;
+        this.editable = file.editable;
     }
 
-    public File(String title, String fileExtension, double fileSize,
-                LocalDate dateOfCreation, int countAppealFile, boolean editFile){
-        this.title = title;
+    public File(String name, String fileExtension, int fileSize,
+                LocalDate dateOfCreation, int countAppealFile, boolean editable){
+        this.name = name;
         this.fileExtension = fileExtension;
         this.fileSize = fileSize;
         this.dateOfCreation = dateOfCreation;
         this.countAppealFile = countAppealFile;
-        this.editFile = editFile;
+        this.editable = editable;
     }
 
 
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getFileExtension() {
         return fileExtension;
     }
 
-    public double getFileSize() {
+    public int getFileSize() {
         return fileSize;
     }
 
@@ -57,18 +56,18 @@ public class File  {
     }
 
     public int getCountAppealFile() {
-        return countAppealFile++;
+        return countAppealFile;
     }
 
-    public boolean isEditFile() {
-        return editFile;
+    public boolean isEditable() {
+        return editable;
     }
 
     public void setFileExtension(String fileExtension) {
         this.fileExtension = fileExtension;
     }
 
-    public void setFileSize(double fileSize) {
+    public void setFileSize(int fileSize) {
         this.fileSize = fileSize;
     }
 
@@ -80,17 +79,17 @@ public class File  {
         this.countAppealFile = countAppealFile;
     }
 
-    public void setEditFile(boolean editFile) {
-        this.editFile = editFile;
+    public void setEditable(boolean editable) {
+        this.editable = editable;
     }
 
     public void show(){
-        System.out.println("Имя файла: " + title);
+        System.out.println("Имя файла: " + name);
         System.out.println("Расширение файла: " + fileExtension);
         System.out.println("Размер файла: " + fileSize);
         System.out.println("Дата создания: " + dateOfCreation);
         System.out.println("Кол-во обращений к файлу: " + countAppealFile);
-        System.out.println("Признак возможность редактирования: " + (editFile ? "Разрешено" : "Запрещено"));
+        System.out.println("Признак возможность редактирования: " + (editable ? "Разрешено" : "Запрещено"));
     }
 
 }
