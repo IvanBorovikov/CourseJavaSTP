@@ -3,8 +3,13 @@ package org.example.organization;
 import java.time.LocalDate;
 
 public class FootballTeam extends Organization {
-
+    /*
+    количество набранных очков в сезоне
+     */
     private int numberOfPointsScoredInSeason;
+    /*
+    количество заявленных игроков
+     */
     private int numberOfRegisteredPlayers;
 
     FootballTeam(){
@@ -17,7 +22,7 @@ public class FootballTeam extends Organization {
         this.numberOfRegisteredPlayers = footballTeam.numberOfRegisteredPlayers;
     }
 
-    FootballTeam(String name, int foundationYear, int numberOfPointsScoredInSeason,
+    FootballTeam(String name, LocalDate foundationYear, int numberOfPointsScoredInSeason,
                  int numberOfRegisteredPlayers, Long budget){
         super(name, foundationYear, budget);
         this.numberOfPointsScoredInSeason = numberOfPointsScoredInSeason;

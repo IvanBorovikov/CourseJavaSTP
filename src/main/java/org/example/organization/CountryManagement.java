@@ -7,41 +7,48 @@ import java.util.List;
 public class CountryManagement {
     public static List<Country> countries = new ArrayList<>();
 
-
-    public static void findAncientCountries(int date){
+    /*
+    а) вывод списка стран, основанных ранее указанного года;
+     */
+    public static void findAncientCountries(LocalDate date){
+        System.out.println("Страна, основанная ранне указанного: ");
         for (Country c : countries){
-            if (c.getFoundationYear() < date){
-                String str = String.format("Страна, основанная ранне указанного: %s", c.getName() + " - " + c.getFoundationYear());
-                System.out.println(str);
+            if (!c.getFoundationYear().isAfter(date)){
+                c.show();
                 System.out.println();
             }
         }
 
     }
 
+    /*
+    б) вывод списка стран, с площадью меньше указанной;
+     */
     public static void getCountriesByMaxArea(Long territory){
+        System.out.printf("Страны с площадью меньше указанного: %d", territory);
         for (Country c : countries){
             if (c.getAreaOfTerritory() < territory){
-                String str = String.format("Страна с площадью меньше указанного: %s", c.getName() + " - " + c.getAreaOfTerritory());
-                System.out.println(str);
+                c.show();
                 System.out.println();
             }
         }
     }
 
+    /*
+    в) вывод фамилии президента страны с указанным количеством граждан.
+     */
     public static void findPresidentLastNameByExactPopulation(Long count){
         for (Country c : countries){
             if (c.getNumberOfCitizens().equals(count)){
-                String str = String.format("Президент страны с кол-ом граждан: %s", c.getLastNameOfPresident() + " - " + c.getNumberOfCitizens() + " млн.");
-                System.out.println(str);
+                System.out.printf("Президент страны с кол-ом граждан: %s", c.getLastNameOfPresident() + " - " + c.getNumberOfCitizens() + " млн.");
                 System.out.println();
             }
         }
     }
 
     public static void main(String[] args) {
-        countries.add(new Country("Россия", 17151442L, 146119928L, 36000000000000000L, 862, "Путин"));
-        countries.add(new Country("Франция", 551500L, 68605616L, 182508000L, 843, "Макрон"));
+        countries.add(new Country("Россия", 17151442L, 146119928L, 36000000000000000L, LocalDate.of(862, 1, 1), "Путин"));
+        countries.add(new Country("Франция", 551500L, 68605616L, 182508000L, LocalDate.of(843, 2, 2), "Макрон"));
 
         findPresidentLastNameByExactPopulation(146119928L);
     }

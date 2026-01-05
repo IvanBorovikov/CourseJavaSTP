@@ -4,7 +4,10 @@ import java.time.LocalDate;
 
 public class Organization {
     protected String name;
-    protected int foundationYear;
+    /*
+    дата основания
+     */
+    protected LocalDate foundationYear;
     protected Long budget;
 
     protected Organization(){
@@ -16,7 +19,10 @@ public class Organization {
         this.budget = organization.budget;
     }
 
-    protected Organization(String name, int foundationYear, Long budget){
+    protected Organization(String name, LocalDate foundationYear, Long budget){
+        if (name == null){
+            throw new IllegalArgumentException("name");
+        }
         this.name = name;
         this.foundationYear = foundationYear;
         this.budget = budget;
@@ -26,7 +32,7 @@ public class Organization {
         return name;
     }
 
-    public int getFoundationYear() {
+    public LocalDate getFoundationYear() {
         return foundationYear;
     }
 
@@ -38,7 +44,7 @@ public class Organization {
         this.name = name;
     }
 
-    public void setFoundationYear(int foundationYear) {
+    public void setFoundationYear(LocalDate foundationYear) {
         this.foundationYear = foundationYear;
     }
 
