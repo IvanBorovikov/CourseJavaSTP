@@ -1,9 +1,21 @@
 package org.example.order;
 
 public class OrderTaxi extends Order {
-    private String departurePoint; // Пункт отправления
-    private String destination; // Пункт прибытия
+    /*
+    Пункт отправления
+     */
+    private String departurePoint;
+    /*
+    Пункт прибытия
+     */
+    private String destination;
+    /*
+    номер машины
+     */
     private int numberCar;
+    /*
+    Протяжность маршрута
+     */
     private double routeLength;
 
     public OrderTaxi(){
@@ -21,6 +33,12 @@ public class OrderTaxi extends Order {
     public OrderTaxi(String serviceProvider, String departurePoint,
               String destination, int numberCar, double cost, double routeLength){
         super(serviceProvider, cost);
+        if (departurePoint == null){
+            throw new IllegalArgumentException("departurePoint");
+        }
+        if (destination == null){
+            throw new IllegalArgumentException("destination");
+        }
         this.departurePoint = departurePoint;
         this.destination = destination;
         this.numberCar = numberCar;

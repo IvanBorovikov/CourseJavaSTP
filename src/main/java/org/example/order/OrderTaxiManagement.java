@@ -7,6 +7,9 @@ public class OrderTaxiManagement {
 
     public static List<OrderTaxi> orderTaxis = new ArrayList<>();
 
+    /*
+    а) вывод информации о заказах, по номеру машины;
+     */
     public static void getOrdersForVehicle(int numCar){
         for (OrderTaxi or : orderTaxis){
             if (or.getNumberCar() == numCar){
@@ -16,16 +19,22 @@ public class OrderTaxiManagement {
         }
     }
 
+    /*
+    б) вывод списка заказов, протяженность которых больше указанной;
+     */
     public static void findLongDistanceOrders(double route){
+        System.out.printf("Заказы протяженность которых больше указанной: %.2f", route);
         for (OrderTaxi or : orderTaxis){
             if (or.getRouteLength() > route){
-                String str = String.format("Заказ, протяженность которого больше указанного: %s", or.getRouteLength());
-                System.out.println(str);
+                or.show();
                 System.out.println();
             }
         }
     }
 
+    /*
+    в) вывод размера среднего чека по всем заказам.
+     */
     public static void getAverageCheck(){
         double total = 0.0;
         for (OrderTaxi or : orderTaxis){

@@ -6,8 +6,11 @@ import java.util.List;
 public class OrderRestaurantManagement {
     public static List<OrderRestaurant> orderRestaurants = new ArrayList<>();
 
-
+    /*
+    а) вывод информации о заказах, принятых конкретным официантом;
+     */
     public static void findOrdersByWaiter(String service){
+        System.out.printf("Информация о заказах принятых конкретным официантом: %s\n", service);
         for (OrderRestaurant or : orderRestaurants){
             if (or.getServiceProvider().equalsIgnoreCase(service)){
                 or.show();
@@ -17,22 +20,27 @@ public class OrderRestaurantManagement {
 
     }
 
+    /*
+    б) вывод списка заказов, стоимость которых больше указанной;
+     */
     public static void findHighValueOrders(double cost){
+        System.out.printf("Информация о заказах принятых конкретным официантом: %.2f\n", cost);
         for (OrderRestaurant or : orderRestaurants){
             if (or.getCost() > cost){
-                String str = String.format("Заказ, стоимость которого больше указанного: %s", or.getDishName() + " - " + or.getCost() + " руб.");
-                System.out.println(str);
+                or.show();
                 System.out.println();
             }
         }
     }
 
+    /*
+    в) вывод списка клиентов, платящих наличными.
+     */
     public static void findCustomersWhoPreferCash(){
-        boolean found = true;
+        System.out.println("Клиенты платящие наличными:");
         for (OrderRestaurant or : orderRestaurants){
-            if (or.isCashOrCard() == found){
-                String str = String.format("Оплатили наличными за столом: %s", or.getTableNumber());
-                System.out.println(str);
+            if (or.isCashOrCard()){
+                or.show();
                 System.out.println();
             }
         }

@@ -1,4 +1,4 @@
-package org.example.naturalObject;
+package org.example.naturalobject;
 
 import java.util.ArrayList;
 

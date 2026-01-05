@@ -1,9 +1,21 @@
 package org.example.order;
 
 public class OrderRestaurant extends Order {
+    /*
+    Номер стола
+     */
     private int tableNumber;
+    /*
+    Наименование блюда
+     */
     private String dishName;
+    /*
+    Чаевые
+     */
     private int tipAmount;
+    /*
+    Оплата наличными или по карте
+     */
     private boolean cashOrCard;
 
     public OrderRestaurant(){
@@ -21,6 +33,9 @@ public class OrderRestaurant extends Order {
     public OrderRestaurant(String serviceProvider,  int tableNumber,
                     String dishName, double cost, int tipAmount, boolean cashOrCard){
         super(serviceProvider, cost);
+        if (dishName == null){
+            throw new IllegalArgumentException("dishName");
+        }
         this.tableNumber = tableNumber;
         this.dishName = dishName;
         this.tipAmount = tipAmount;
