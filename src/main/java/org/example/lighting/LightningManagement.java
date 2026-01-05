@@ -9,11 +9,11 @@ public class LightningManagement {
     /*
     а) вывод списка молний, зафиксированных указанным наблюдателем и ударивших от него дальше указанного значения;
      */
-    public static void findDistantLightningsRecordedBy(String owner, double distance){
-        System.out.printf("Зафиксированы наблюдателем: %s", owner);
+    public static void findDistantLightningsRecordedBy(String lastName, double distance){
+        System.out.printf("Зафиксированы наблюдателем: %s", lastName);
         System.out.printf(". Ударившись от него дальше указанного значения - %.2f\n", distance);
         for (Lightning l : lightnings){
-            if (l.getLastNameObserver().equalsIgnoreCase(owner) && l.getDistanceFromObserver() > distance){
+            if (l.getLastNameObserver().equalsIgnoreCase(lastName) && l.getDistanceFromObserver() > distance){
                 l.show();
                 System.out.println();
             }
@@ -27,7 +27,7 @@ public class LightningManagement {
         System.out.printf("Молнии с длиной больше указанной: %d", length);
         System.out.printf(". Заданные длительностью - %.2f\n", duration);
         for (Lightning l : lightnings){
-            if (l.getZipperLength() > length && l.getDischargeDuration() == duration){
+            if (l.getLength() > length && l.getDischargeDuration() == duration){
                 l.show();
                 System.out.println();
             }

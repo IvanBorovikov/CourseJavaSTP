@@ -1,49 +1,64 @@
 package org.example.lighting;
 
 public class Lightning {
-    private String lightningId;
-    private int zipperLength; //длина молнии
-    private double dischargePower; //мощность разряда
-    private double distanceFromObserver; //удаленность от наблюдателя
-    private double dischargeDuration; //длительность разряда
-    private String lastNameObserver; // фамилия наблюдателя
+    private String id;
+    /*
+    длина молнии
+     */
+    private int length;
+    /*
+    мощность разряда
+     */
+    private double dischargePower;
+    /*
+    удаленность от наблюдателя
+     */
+    private double distanceFromObserver;
+    /*
+    длительность разряда
+     */
+    private double dischargeDuration;
+    /*
+    фамилия наблюдателя
+     */
+    private String lastNameObserver;
 
     public Lightning(){
 
     }
 
     public Lightning(Lightning lightning){
-        this.lightningId = lightning.lightningId;
-        this.zipperLength = lightning.zipperLength;
+        this.id = lightning.id;
+        this.length = lightning.length;
         this.dischargePower = lightning.dischargePower;
         this.distanceFromObserver = lightning.distanceFromObserver;
         this.dischargeDuration = lightning.dischargeDuration;
         this.lastNameObserver = lightning.lastNameObserver;
     }
 
-    public Lightning(String lightningId, int zipperLength, double dischargePower,
-              double distanceFromObserver, double dischargeDuration, String lastNameObserver){
-        if (lightningId == null){
+    public Lightning(String id, int length, double dischargePower,
+                     double distanceFromObserver, double dischargeDuration, String lastNameObserver){
+        if (id == null){
             throw new IllegalArgumentException("lightningId");
         }
 
         if (lastNameObserver == null){
             throw new IllegalArgumentException("lastNameObserver");
         }
-        this.lightningId = lightningId;
-        this.zipperLength = zipperLength;
+        this.id = id;
+        this.length = length;
         this.dischargePower = dischargePower;
         this.distanceFromObserver = distanceFromObserver;
         this.dischargeDuration = dischargeDuration;
         this.lastNameObserver = lastNameObserver;
     }
 
-    public String getLightningId() {
-        return lightningId;
+    public String getId() {
+        return id;
     }
 
-    public int getZipperLength() {
-        return zipperLength;
+    public int getLength() {
+        return length;
     }
 
     public double getDischargePower() {
@@ -62,12 +77,12 @@ public class Lightning {
         return lastNameObserver;
     }
 
-    public void setLightningId(String lightningId) {
-        this.lightningId = lightningId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public void setZipperLength(int zipperLength) {
-        this.zipperLength = zipperLength;
+    public void setLength(int length) {
+        this.length = length;
     }
 
     public void setDischargePower(double dischargePower) {
@@ -87,8 +102,8 @@ public class Lightning {
     }
 
     public void show(){
-        System.out.println("Идентификатор молнии: " + lightningId);
-        System.out.println("Длина молнии: " + zipperLength);
+        System.out.println("Идентификатор молнии: " + id);
+        System.out.println("Длина молнии: " + length);
         System.out.println("Мощность разряда: " + dischargePower);
         System.out.println("Удаленность от наблюдателя: " + distanceFromObserver);
         System.out.println("Длительность разряда: " + dischargeDuration);
