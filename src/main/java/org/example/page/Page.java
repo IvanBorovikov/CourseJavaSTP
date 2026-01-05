@@ -1,11 +1,29 @@
 package org.example.page;
 
 public class Page {
+    /*
+    количество букв
+     */
     private int numberOfLetters;
+    /*
+    количество гласных
+     */
     private int numberOfVowels;
+    /*
+    размер шрифта
+     */
     private int fontSize;
+    /*
+    число абзацев
+     */
     private int numberOfParagraphs;
+    /*
+    номер страницы
+     */
     private int pageNumber;
+    /*
+    число строк
+     */
     private int numberOfRows;
 
     public Page(){

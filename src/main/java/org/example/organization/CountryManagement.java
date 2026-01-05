@@ -18,7 +18,6 @@ public class CountryManagement {
                 System.out.println();
             }
         }
-
     }
 
     /*

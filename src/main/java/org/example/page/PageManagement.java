@@ -6,7 +6,11 @@ import java.util.List;
 public class PageManagement {
     public static List<Page> pages = new ArrayList<>();
 
+    /*
+    а) вывод списка страниц, содержащих количество букв больше заданного;
+     */
     public static void findPagesWithLetterCountGreaterThan(int letters){
+        System.out.printf("Страницы, содержащих количество букв больше заданного: %d", letters);
         for (Page p : pages){
             if (p.getNumberOfLetters() > letters){
                 p.show();
@@ -15,6 +19,9 @@ public class PageManagement {
         }
     }
 
+    /*
+    б) вывод списка номеров страниц и количеств согласных букв на них;
+     */
     public static void getPageSummaryStatistics(int page){
         for (Page p : pages){
             if (p.getPageNumber() == page){
@@ -24,6 +31,9 @@ public class PageManagement {
         }
     }
 
+    /*
+    в) вывод среднего количества букв на странице.
+     */
     public static void calculateAverageLetterCountPerPage(){
         int total = 0;
         for (Page p : pages){
