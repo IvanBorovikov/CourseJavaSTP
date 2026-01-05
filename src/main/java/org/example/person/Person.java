@@ -10,13 +10,6 @@ public abstract class Person {
 
     }
 
-    protected Person(String lastName, String firstName, String middleName, String address){
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
-        this.address = address;
-    }
-
     protected Person(Person p){
         this.lastName = p.lastName;
         this.firstName = p.firstName;
@@ -24,6 +17,27 @@ public abstract class Person {
         this.address = p.address;
     }
 
+    protected Person(String lastName, String firstName, String middleName, String address){
+        if (lastName == null){
+            throw new IllegalArgumentException("lastName");
+        }
+
+        if (firstName == null){
+            throw new IllegalArgumentException("firstName");
+        }
+
+        if (middleName == null){
+            throw new IllegalArgumentException("middleName");
+        }
+
+        if (address == null){
+            throw new IllegalArgumentException("address");
+        }
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.address = address;
+    }
 
     public String getLastName() {
         return lastName;

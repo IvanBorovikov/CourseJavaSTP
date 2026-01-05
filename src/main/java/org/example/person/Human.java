@@ -1,9 +1,13 @@
 package org.example.person;
 
 public class Human extends Person {
-
-
+    /*
+    Пол
+     */
     protected boolean male;
+    /*
+    Образование
+     */
     protected String education;
     protected int age;
 
@@ -16,8 +20,10 @@ public class Human extends Person {
 
     public Human(String lastName, String firstName, String middleName,
                  String address, boolean male, String education, int age) {
-
         super(lastName, firstName, middleName, address);
+        if (education == null){
+            throw new IllegalArgumentException("education");
+        }
         this.male = male;
         this.education = education;
         this.age = age;

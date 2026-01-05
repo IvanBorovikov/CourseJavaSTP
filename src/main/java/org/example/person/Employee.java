@@ -2,9 +2,21 @@ package org.example.person;
 
 public class Employee {
     private String lastName, firstName, middleName;
+    /*
+    Должность
+     */
     private String position;
+    /*
+    Подразделение
+     */
     private String department;
+    /*
+    Год поступления на работу
+     */
     private int yearOfEmployment;
+    /*
+    Зарплата
+     */
     private double salary;
 
     public Employee(){
@@ -23,6 +35,25 @@ public class Employee {
 
     public Employee(String lastName, String firstName, String middleName, String position,
              String department, int yearOfEmployment, int salary){
+        if (lastName == null){
+            throw new IllegalArgumentException("lastName");
+        }
+
+        if (firstName == null){
+            throw new IllegalArgumentException("firstName");
+        }
+
+        if (middleName == null){
+            throw new IllegalArgumentException("middleName");
+        }
+
+        if (position == null){
+            throw new IllegalArgumentException("position");
+        }
+
+        if (department == null){
+            throw new IllegalArgumentException("department");
+        }
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
@@ -30,7 +61,6 @@ public class Employee {
         this.department = department;
         this.yearOfEmployment = yearOfEmployment;
         this.salary = salary;
-
     }
 
     public String getLastName() {

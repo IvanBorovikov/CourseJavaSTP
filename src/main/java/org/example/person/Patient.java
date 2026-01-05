@@ -1,9 +1,17 @@
 package org.example.person;
 
 public class Patient extends Person {
-
+    /*
+    номер медицинской карты
+     */
     private int medicalCardNumber;
+    /*
+    Диагноз
+     */
     private String diagnosis;
+    /*
+    фамилия лечащего врача
+     */
     private String lastNameOfTheAttendingPhysician;
 
     public Patient(){
@@ -20,6 +28,14 @@ public class Patient extends Person {
     public Patient(String lastName, String firstName, String middleName,
             String address, int medicalCardNumber, String diagnosis, String lastNameOfTheAttendingPhysician){
         super(lastName, firstName, middleName, address);
+        if (diagnosis == null){
+            throw new IllegalArgumentException("diagnosis");
+        }
+
+        if (lastNameOfTheAttendingPhysician == null){
+            throw new IllegalArgumentException("lastNameOfTheAttendingPhysician");
+        }
+
         this.medicalCardNumber = medicalCardNumber;
         this.diagnosis = diagnosis;
         this.lastNameOfTheAttendingPhysician = lastNameOfTheAttendingPhysician;

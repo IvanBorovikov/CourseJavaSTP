@@ -6,10 +6,13 @@ public class ClientsBankManagement {
 
     public static ArrayList<ClientBank> clientsBanks = new ArrayList<>();
 
+    /*
+    а) вывод информации о клиенте по номеру банковского счета;
+     */
     public static void showCustomerInformation(int id){
+        System.out.printf("Клиент по номеру банковского счета: %d", id);
         boolean found = false;
         for (ClientBank cl : clientsBanks){
-
             if (cl.getBankAccountNumber() == id){
                 found = true;
                 cl.show();
@@ -18,11 +21,15 @@ public class ClientsBankManagement {
         }
 
         if (!found){
-            System.out.println("Такого id(" + id + ") - нет");
+            System.out.println("Такого id (" + id + ") - нет");
         }
     }
 
+    /*
+    б) вывод списка клиентов, количество денег на счете которых, меньше указанного;
+     */
     public static void showCustomersWithLessMoney(double money){
+        System.out.printf("Клиенты, количество денег на счете которых меньше указанного: %.2f", money);
         for (ClientBank cl : clientsBanks){
             if (cl.getAmountOfMoneyAccount() < money){
                 cl.show();
@@ -31,7 +38,11 @@ public class ClientsBankManagement {
         }
     }
 
+    /*
+    в) вывод списка клиентов, без овердрафта
+ */
     public static void showWithoutAnOverdraft(){
+        System.out.println("Клиентов, без овердрафта:");
         for (ClientBank cl : clientsBanks){
             if (cl.getOverdraftLimit() == 0.0){
                 cl.show();

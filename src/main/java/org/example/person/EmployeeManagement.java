@@ -5,7 +5,11 @@ import java.util.ArrayList;
 public class EmployeeManagement {
     public static ArrayList<Employee> employees = new ArrayList<>();
 
+    /*
+    а) вывод списка сотрудников, работающих в заданном подразделении;
+     */
     public static void WorkingInTheDepartment(String department){
+        System.out.printf("Сотрудники, работающие в заданном подразделении: %s", department);
         for (Employee emp : employees){
             if (emp.getDepartment().equalsIgnoreCase(department)){
                 emp.show();
@@ -14,7 +18,11 @@ public class EmployeeManagement {
         }
     }
 
+    /*
+    б) вывод списка сотрудников, зарплата которых больше заданной;
+     */
     public static void SalaryHigherThanTheSetOne(double salary1){
+        System.out.printf("Сотрудники, зарплата которых больше заданной: %.2f", salary1);
         for (Employee emp : employees){
             if (emp.getSalary() > salary1){
                 emp.show();
@@ -23,7 +31,11 @@ public class EmployeeManagement {
         }
     }
 
+    /*
+    в) вывод списка сотрудников, занимающих заданную должность.
+     */
     public static void currentPositions (String position1){
+        System.out.printf("Сотрудники, занимающих заданную должность: %s", position1);
         for (Employee emp : employees){
             if (emp.getPosition().equalsIgnoreCase(position1)){
                 emp.show();

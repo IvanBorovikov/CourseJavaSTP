@@ -2,8 +2,17 @@ package org.example.person;
 
 public class ClientBank extends Person {
     private String phone;
+    /*
+    номер банковского счета
+     */
     private int bankAccountNumber;
+    /*
+    количество денег на счете
+     */
     private double amountOfMoneyAccount;
+    /*
+    лимит овердрафта
+     */
     private double overdraftLimit;
 
     public ClientBank(){
