@@ -3,9 +3,21 @@ package org.example.naturalObject;
 public class Star {
     private String name;
     private Long age;
+    /*
+    Яркость
+     */
     private double brightness;
+    /*
+    Диаметр
+     */
     private double diameter;
+    /*
+    Удаленность от солнца
+     */
     private Long distanceFromTheSun;
+    /*
+    Принадлежность галактике
+     */
     private String belongingToTheGalaxy;
 
     public Star(){
