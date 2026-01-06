@@ -2,7 +2,8 @@ package org.example.university;
 
 import org.example.person.Person;
 
-public class Teacher extends Person {
+public class Teacher {
+    private String lastName, firstName, middleName;
     private String post;
     private String department;
     private String object;
@@ -12,7 +13,9 @@ public class Teacher extends Person {
     }
 
     Teacher(Teacher teacher){
-        super(teacher);
+        this.lastName = teacher.lastName;
+        this.firstName = teacher.firstName;
+        this.middleName = teacher.middleName;
         this.post = teacher.post;
         this.department = teacher.department;
         this.object = teacher.object;
@@ -20,11 +23,25 @@ public class Teacher extends Person {
 
     Teacher(String lastName, String firstName, String middleName, String post,
             String department, String object){
-        super(lastName, firstName, middleName, null);
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.middleName = middleName;
         this.post = post;
         this.department = department;
         this.object = object;
 
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getMiddleName() {
+        return middleName;
     }
 
     public String getPost() {
@@ -39,6 +56,18 @@ public class Teacher extends Person {
         return object;
     }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
     public void setPost(String post) {
         this.post = post;
     }
@@ -50,6 +79,7 @@ public class Teacher extends Person {
     public void setObject(String object) {
         this.object = object;
     }
+
 
     public void show(){
         System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);

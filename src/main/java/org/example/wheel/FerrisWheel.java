@@ -1,11 +1,29 @@
 package org.example.wheel;
 
 public class FerrisWheel {
+    /*
+    Наименование колеса
+     */
     private String nameWheel;
+    /*
+    высота колеса
+     */
     private int wheelHeight;
+    /*
+   длительность полного оборота(минуты)
+     */
     private int theDurationOfCompleteRevolution;
+    /*
+    количество мест
+     */
     private int numberOfSeats;
+    /*
+  наименование владельца
+     */
     private String nameOwner;
+    /*
+    год постройки.
+     */
     private int yearOfConstruction;
 
     public FerrisWheel(){
@@ -23,6 +41,14 @@ public class FerrisWheel {
 
     public FerrisWheel(String nameWheel, int wheelHeight, int theDurationOfCompleteRevolution,
                 int numberOfSeats, String nameOwner, int yearOfConstruction){
+        if (nameWheel == null){
+            throw new IllegalArgumentException("nameWheel");
+        }
+
+        if (nameOwner == null){
+            throw new IllegalArgumentException("nameOwner");
+        }
+
         this.nameWheel = nameWheel;
         this.wheelHeight = wheelHeight;
         this.theDurationOfCompleteRevolution = theDurationOfCompleteRevolution;

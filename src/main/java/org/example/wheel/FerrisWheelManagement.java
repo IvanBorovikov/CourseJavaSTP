@@ -6,7 +6,11 @@ import java.util.List;
 public class FerrisWheelManagement {
     public static List<FerrisWheel> ferrisWheels = new ArrayList<>();
 
+    /*
+    а) вывод списка колес, построенных после указанного года;
+     */
     public static void findWheelsBuiltAfter(int year){
+        System.out.printf("Колеса построенные после указанного года: %d", year);
         for (FerrisWheel f : ferrisWheels){
             if (f.getYearOfConstruction() > year){
                 f.show();
@@ -15,7 +19,11 @@ public class FerrisWheelManagement {
         }
     }
 
+    /*
+    б) вывод списка колес, имеющих высоту больше указанной и количество мест меньше указанного.
+     */
     public static void findWheelsByHeightAndSeats(int height, int seats){
+        System.out.printf("Колеса имеющие высоту больше указанной %d. И количество мест меньше указанного: %d\n", height, seats);
         for (FerrisWheel f : ferrisWheels){
             if (f.getWheelHeight() > height && f.getNumberOfSeats() < seats){
                 f.show();
