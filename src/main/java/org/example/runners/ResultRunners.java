@@ -3,10 +3,22 @@ package org.example.runners;
 import java.time.LocalTime;
 
 public class ResultRunners {
+    /*
+    Фамилия спортсмена
+     */
     private String lastNameOfTheAthlete;
+    /*
+    страна, которую он представляет
+     */
     private String country;
     private int age;
+    /*
+    дистанция забега
+     */
     private double raceDistance;
+    /*
+    результат.
+     */
     private LocalTime result;
 
     public ResultRunners(){
@@ -23,6 +35,13 @@ public class ResultRunners {
 
     public ResultRunners(String lastNameOfTheAthlete, String country, int age, double raceDistance,
                          LocalTime result){
+        if (lastNameOfTheAthlete == null){
+            throw new IllegalArgumentException("lastNameOfTheAthlete");
+        }
+
+        if (country == null){
+            throw new IllegalArgumentException("country");
+        }
         this.lastNameOfTheAthlete = lastNameOfTheAthlete;
         this.country = country;
         this.age = age;
