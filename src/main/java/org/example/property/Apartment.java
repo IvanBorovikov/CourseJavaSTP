@@ -1,11 +1,29 @@
 package org.example.property;
 
 public class Apartment {
+    /*
+    номер квартиры
+     */
     private int apartmentNumber;
+    /*
+    номер этажа
+     */
     private int floorNumber;
+    /*
+    количество комнат
+     */
     private int numberOfRooms;
+    /*
+    общая площадь
+     */
     private double totalArea;
+    /*
+    жилая площадь
+     */
     private double livingArea;
+    /*
+    фамилия владельца.
+     */
     private String ownerLastName;
 
 
@@ -24,6 +42,9 @@ public class Apartment {
 
     public Apartment(int apartmentNumber, int floorNumber, int numberOfRooms,
               double totalArea, double livingArea, String ownerLastName){
+        if (ownerLastName == null){
+            throw new IllegalArgumentException("ownerLastName");
+        }
         this.apartmentNumber = apartmentNumber;
         this.floorNumber = floorNumber;
         this.numberOfRooms = numberOfRooms;

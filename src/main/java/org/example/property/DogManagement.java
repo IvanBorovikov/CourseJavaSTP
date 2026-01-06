@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DogManagement {
-
     public static List<Dog> dogs = new ArrayList<>();
 
+    /*
+    а) вывод списка собак, принадлежащих указанному владельцу;
+     */
     public static void findDogsByOwnerLastName(String owner){
+        System.out.printf("Собаки принадлежащие указанному владельцу: %s\n", owner);
         for (Dog d : dogs) {
             if (d.getOwnerLastName().equalsIgnoreCase(owner)){
                 d.show();
@@ -16,7 +19,11 @@ public class DogManagement {
         }
     }
 
+    /*
+    б) вывод списка собак, указанного окраса;
+     */
     public static void findDogsByCoatColor(String color){
+        System.out.printf("Собаки указанного окраса: %s\n", color);
         for (Dog d : dogs) {
             if (d.getColor().equalsIgnoreCase(color)){
                 d.show();
@@ -25,7 +32,11 @@ public class DogManagement {
         }
     }
 
+    /*
+    в) вывод информации по собакам, вес которых больше заданного.
+     */
     public static void findByWeightKgGreaterThan(double weight){
+        System.out.printf("Собаки вес которых больше заданного: %.2f\n", weight);
         for (Dog d : dogs) {
             if (d.getWeight() > weight){
                 d.show();

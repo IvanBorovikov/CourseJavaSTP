@@ -6,7 +6,11 @@ import java.util.List;
 public class ApartmentManagement {
     public static List<Apartment> apartments = new ArrayList<>();
 
+    /*
+    а) вывод списка квартир, имеющих заданное число комнат;
+     */
     public static void findApartmentsByRoomCount(int rooms){
+        System.out.printf("Квартиры имеющие заданное число комнат: %d\n", rooms);
         for (Apartment a : apartments){
             if (a.getNumberOfRooms() == rooms){
                 a.show();
@@ -15,7 +19,11 @@ public class ApartmentManagement {
         }
     }
 
+    /*
+    б) вывод списка квартир, принадлежащих заданному владельцу;
+     */
     public static void findApartmentsByOwnerLastName(String owner){
+        System.out.printf("Квартиры принадлежащие заданному владельцу: %s\n", owner);
         for (Apartment a : apartments){
             if (a.getOwnerLastName().equalsIgnoreCase(owner)){
                 a.show();
@@ -24,7 +32,11 @@ public class ApartmentManagement {
         }
     }
 
+    /*
+    в) вывод средней площади комнату квартиры с указанным номером.
+     */
     public static void calculateAverageRoomAreaForApartment(int apartment){
+        System.out.printf("Средняя площадь комнаты квартиры с указанным номером: %d\n", apartment);
         double total;
         for (Apartment a : apartments){
             if (a.getApartmentNumber() == apartment){

@@ -1,12 +1,33 @@
 package org.example.property;
 
 public class Dog {
+    /*
+    кличка
+     */
     private String nickname;
+    /*
+    порода
+     */
     private String breed;
+    /*
+    вес
+     */
     private double weight;
+    /*
+    фамилия хозяина
+     */
     private String ownerLastName;
+    /*
+    окрас
+     */
     private String color;
+    /*
+    пол
+     */
     private boolean male;
+    /*
+    рост
+     */
     private int height;
     private int age;
 
@@ -28,6 +49,17 @@ public class Dog {
 
     public Dog(String nickname, String breed, double weight, String ownerLastName,
         String color, boolean male, int height, int age){
+        if (ownerLastName == null){
+            throw new IllegalArgumentException("ownerLastName");
+        }
+
+        if (nickname == null){
+            throw new IllegalArgumentException("nickname");
+        }
+
+        if (breed == null){
+            throw new IllegalArgumentException("breed");
+        }
         this.nickname = nickname;
         this.breed = breed;
         this.weight = weight;
