@@ -1,10 +1,25 @@
 package org.example.tornado;
 
 public class Tornado {
+    /*
+    Категория урагана
+     */
     private String hurricaneCategory;
+    /*
+    длительность существования
+     */
     private int duration;
+    /*
+   высота
+     */
     private double height;
+    /*
+    фамилия наблюдателя
+     */
     private String lastNameOfTheObserver;
+    /*
+    наземный/надводный.
+     */
     private boolean landOrSurface;
 
     public Tornado(){
@@ -21,6 +36,13 @@ public class Tornado {
 
     public Tornado(String hurricaneCategory, int duration, double height,
             String lastNameOfTheObserver, boolean landOrSurface){
+        if (hurricaneCategory == null){
+            throw new IllegalArgumentException("hurricaneCategory");
+        }
+
+        if (lastNameOfTheObserver == null){
+            throw new IllegalArgumentException("lastNameOfTheObserver");
+        }
         this.hurricaneCategory = hurricaneCategory;
         this.duration = duration;
         this.height = height;
