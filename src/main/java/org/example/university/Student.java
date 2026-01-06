@@ -7,11 +7,25 @@ import java.time.LocalDate;
 
 
 public class Student extends Person {
-
+    /*
+    факультет
+     */
     private String faculty;
+    /*
+    курс
+     */
     private int course;
+    /*
+    Иногородний
+     */
     private boolean resident;
+    /*
+    Телефон
+     */
     private String phone;
+    /*
+    дата рождения
+     */
     private LocalDate dateOfBirth;
 
     public Student() {
@@ -30,8 +44,14 @@ public class Student extends Person {
     public Student(String lastName, String firstName, String middleName,
                    LocalDate dateOfBirth, String address, String phone,
                    String faculty, int course, boolean resident) {
-
         super(lastName, firstName, middleName, address);
+        if (phone == null){
+            throw new IllegalArgumentException("phone");
+        }
+
+        if (faculty == null){
+            throw new IllegalArgumentException("faculty");
+        }
         this.dateOfBirth = dateOfBirth;
         this.faculty = faculty;
         this.course = course;
@@ -74,9 +94,11 @@ public class Student extends Person {
     }
 
     public void show() {
-
+        System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);
         System.out.println("Факультет: " + faculty);
         System.out.println("Курс: " + course);
+        System.out.println("Телефон: " + phone);
+        System.out.println("Дата рождения: " + dateOfBirth);
         System.out.println("Иногородний: " + (resident ? "Нет" : "Да"));
     }
 

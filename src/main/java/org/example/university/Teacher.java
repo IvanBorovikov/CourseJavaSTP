@@ -4,12 +4,21 @@ import org.example.person.Person;
 
 public class Teacher {
     private String lastName, firstName, middleName;
+    /*
+     Должность
+     */
     private String post;
+    /*
+     Кафедра
+     */
     private String department;
+    /*
+    Предмет
+     */
     private String object;
 
     Teacher(){
-        super();
+
     }
 
     Teacher(Teacher teacher){
@@ -23,6 +32,29 @@ public class Teacher {
 
     Teacher(String lastName, String firstName, String middleName, String post,
             String department, String object){
+        if (lastName == null){
+            throw new IllegalArgumentException("lastName");
+        }
+
+        if (firstName == null){
+            throw new IllegalArgumentException("firstName");
+        }
+
+        if (middleName == null){
+            throw new IllegalArgumentException("middleName");
+        }
+
+        if (post == null){
+            throw new IllegalArgumentException("post");
+        }
+
+        if (department == null){
+            throw new IllegalArgumentException("department");
+        }
+
+        if (object == null){
+            throw new IllegalArgumentException("object");
+        }
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;

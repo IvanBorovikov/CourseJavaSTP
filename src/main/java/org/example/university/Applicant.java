@@ -3,8 +3,14 @@ package org.example.university;
 import org.example.person.Person;
 
 public class Applicant extends Person {
-    private String [] subject;
-    private int [] ratings;
+    /*
+    Предмет
+     */
+    private String subject;
+    /*
+    Оценка
+     */
+    private int ratings;
 
     Applicant(){
         super();
@@ -20,30 +26,31 @@ public class Applicant extends Person {
     Applicant(String lastName, String firstName, String middleName, String address,
               String subject, int ratings){
         super(lastName, firstName, middleName, address);
-        this.subject = new String[]{subject};
-        this.ratings = new int[]{ratings};
+        this.subject = subject;
+        this.ratings = ratings;
 
     }
 
-    public String[] getSubject() {
+    public String getSubject() {
         return subject;
     }
 
-    public void setSubject(String[] subject) {
+    public void setSubject(String subject) {
         this.subject = subject;
     }
 
-    public int[] getRatings() {
+    public int getRatings() {
         return ratings;
     }
 
-    public void setRatings(int[] ratings) {
+    public void setRatings(int ratings) {
         this.ratings = ratings;
     }
 
     public void show(){
         System.out.println("Студент: " + lastName + " " + firstName + " " + middleName);
-        //System.out.println("Предметы: " + );
-        //System.out.println("Оценки: " + );
+        System.out.println("Адрес: " + address);
+        System.out.println("Предметы: " + subject);
+        System.out.println("Оценки: " + ratings);
     }
 }
