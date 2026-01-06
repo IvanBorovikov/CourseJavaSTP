@@ -9,7 +9,7 @@ public class PatientManagement {
     а) вывод списка пациентов, имеющих данный диагноз;
      */
     public static void havingADiagnosis(String diagnosis1){
-        System.out.printf("Пациенты имеющих данный диагноз: %s", diagnosis1);
+        System.out.printf("Пациенты имеющих данный диагноз: %s\n", diagnosis1);
         for (Patient p : patients){
             if (p.getDiagnosis().equalsIgnoreCase(diagnosis1)){
                 p.show();
@@ -22,7 +22,7 @@ public class PatientManagement {
     б) вывод информации о пациенте по номеру медицинской карты;
      */
     public static void medicalCardInformation(int cardNum){
-        System.out.printf("Пациент по номеру медицинской карты: %d", cardNum);
+        System.out.printf("Пациент по номеру медицинской карты: %d\n", cardNum);
         for (Patient p : patients){
             if (p.getMedicalCardNumber() == cardNum){
                 p.show();
@@ -35,7 +35,7 @@ public class PatientManagement {
     в) вывод списка пациентов заданного лечащего врача.
      */
     public static void theAttendingPhysician(String ownerDoctor){
-        System.out.printf("Пациенты заданного лечащего врача: %s", ownerDoctor);
+        System.out.printf("Пациенты заданного лечащего врача: %s\n", ownerDoctor);
         for (Patient p : patients){
             if (p.getLastNameOfTheAttendingPhysician().equalsIgnoreCase(ownerDoctor)){
                 p.show();

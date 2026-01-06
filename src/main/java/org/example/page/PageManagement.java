@@ -10,7 +10,7 @@ public class PageManagement {
     а) вывод списка страниц, содержащих количество букв больше заданного;
      */
     public static void findPagesWithLetterCountGreaterThan(int letters){
-        System.out.printf("Страницы, содержащих количество букв больше заданного: %d", letters);
+        System.out.printf("Страницы, содержащих количество букв больше заданного: %d\n", letters);
         for (Page p : pages){
             if (p.getNumberOfLetters() > letters){
                 p.show();

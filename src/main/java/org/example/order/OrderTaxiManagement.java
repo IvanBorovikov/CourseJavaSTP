@@ -11,6 +11,7 @@ public class OrderTaxiManagement {
     а) вывод информации о заказах, по номеру машины;
      */
     public static void getOrdersForVehicle(int numCar){
+        System.out.printf("Заказы по номеру машины: %d\n", numCar);
         for (OrderTaxi or : orderTaxis){
             if (or.getNumberCar() == numCar){
                 or.show();
@@ -23,7 +24,7 @@ public class OrderTaxiManagement {
     б) вывод списка заказов, протяженность которых больше указанной;
      */
     public static void findLongDistanceOrders(double route){
-        System.out.printf("Заказы протяженность которых больше указанной: %.2f", route);
+        System.out.printf("Заказы протяженность которых больше указанной: %.2f\n", route);
         for (OrderTaxi or : orderTaxis){
             if (or.getRouteLength() > route){
                 or.show();

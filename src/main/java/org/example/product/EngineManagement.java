@@ -6,28 +6,38 @@ import java.util.List;
 public class EngineManagement {
     public static List<Engine> engines = new ArrayList<>();
 
+    /*
+    а) вывод списка двигателей, мощность которых больше указанной;
+     */
     public static void getEnginesByMinPower(double power){
+        System.out.printf("Двигатели мощность которых больше указанной: %.2f", power);
         for (Engine e : engines){
             if (e.getPower() > power){
-                String str = String.format("Двигатель мощность которого больше указанного: %s", e.getManufacture() + " - " + (e.isEngineType() ? "Бензин" : "Дизель"));
-                System.out.println(str);
+                e.show();
                 System.out.println();
             }
         }
     }
 
-    public static void findEnginesByValvesAndCylinders(double valves, int countCylinders){
+    /*
+    б) вывод списка двигателей, с заданным количеством клапанов и цилиндров;
+     */
+    public static void findEnginesByValvesAndCylinders(int valves, int countCylinders){
+        System.out.printf("Двигатели с заданным количеством клапанов и цилиндров: %d, %d\n", valves, countCylinders);
         for (Engine e : engines){
             if (e.getNumberOfValves() == valves && e.getNumberOfCylinders() == countCylinders){
-                String str = String.format("Двигатель c заданным кол-ом клапанов и цилиндров: %s", e.getManufacture() + " - " + (e.isEngineType() ? "Бензин" : "Дизель"));
-                System.out.println(str);
+                e.show();
                 System.out.println();
             }
         }
 
     }
 
+    /*
+    в) вывод информации по двигателям, заданного типа.
+     */
     public static void findEnginesByType(boolean type){
+        System.out.printf("Двигатели заданного типа: %b",type);
         for (Engine e : engines){
             if (e.isEngineType() == type){
                 e.show();
@@ -42,6 +52,6 @@ public class EngineManagement {
         engines.add(new Engine("Cummins", 360.0, 6.7, false, 24, 6));
         engines.add(new Engine("Ferrari", 800.0, 6.5, true, 48, 12));
 
-        findEnginesByType(true);
+        findEnginesByValvesAndCylinders(16, 4);
     }
 }

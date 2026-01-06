@@ -11,7 +11,7 @@ public class FootballTeamManagement {
     а) вывод списка клубов набравших в сезоне очков больше заданного;
      */
     public static void findTopPerformingClubs(int point){
-        System.out.printf("Клуб набравший очков больше указанного: %d", point);
+        System.out.printf("Клуб набравший очков больше указанного: %d\n", point);
         for (FootballTeam f : footballTeams){
             if (f.getNumberOfPointsScoredInSeason() > point){
                 f.show();

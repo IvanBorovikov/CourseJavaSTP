@@ -1,11 +1,29 @@
 package org.example.product;
 
 public class Engine {
+    /*
+    производитель
+     */
     private String manufacture;
+    /*
+     мощность
+     */
     private double power;
+    /*
+    объем цилиндров
+     */
     private double cylinderCapacity;
+    /*
+    тип двигателя(бензин/дизель)
+     */
     private boolean engineType;
+    /*
+    количество клапанов
+     */
     private int numberOfValves;
+    /*
+    количество цилиндров.
+     */
     private int numberOfCylinders;
 
     public Engine(){

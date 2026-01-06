@@ -1,11 +1,29 @@
 package org.example.product;
 
 public class Rocket {
+    /*
+    производитель
+     */
     private String manufacturer;
+    /*
+    мощность двигателя
+     */
     private int enginePower;
+    /*
+    дальность
+     */
     private int range;
+    /*
+    гарантированная точность (в метрах)
+     */
     private int guaranteedAccuracyInMeters;
+    /*
+    количество боеголовок
+     */
     private int numberOfWarheads;
+    /*
+    мощность боеголовок.
+     */
     private int warheadPower;
 
     public Rocket(){
@@ -23,6 +41,10 @@ public class Rocket {
 
     public Rocket(String manufacturer, int   enginePower, int range,
            int guaranteedAccuracyInMeters, int numberOfWarheads, int warheadPower){
+        if(manufacturer == null){
+            throw new IllegalArgumentException("manufacturer");
+        }
+
         this.manufacturer = manufacturer;
         this.enginePower = enginePower;
         this.range = range;

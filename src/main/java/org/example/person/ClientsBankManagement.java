@@ -10,7 +10,7 @@ public class ClientsBankManagement {
     а) вывод информации о клиенте по номеру банковского счета;
      */
     public static void showCustomerInformation(int id){
-        System.out.printf("Клиент по номеру банковского счета: %d", id);
+        System.out.printf("Клиент по номеру банковского счета: %d\n", id);
         boolean found = false;
         for (ClientBank cl : clientsBanks){
             if (cl.getBankAccountNumber() == id){
@@ -29,7 +29,7 @@ public class ClientsBankManagement {
     б) вывод списка клиентов, количество денег на счете которых, меньше указанного;
      */
     public static void showCustomersWithLessMoney(double money){
-        System.out.printf("Клиенты, количество денег на счете которых меньше указанного: %.2f", money);
+        System.out.printf("Клиенты, количество денег на счете которых меньше указанного: %.2f\n", money);
         for (ClientBank cl : clientsBanks){
             if (cl.getAmountOfMoneyAccount() < money){
                 cl.show();

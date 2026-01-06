@@ -1,11 +1,29 @@
 package org.example.product;
 
 public class Phone {
+    /*
+    производитель
+     */
     private String manufacturer;
+    /*
+    модель
+     */
     private String model;
+    /*
+    объем памяти
+     */
     private int memoryCapacity;
+    /*
+    цвет корпуса
+     */
     private String bodyColor;
+    /*
+    диагональ экрана
+     */
     private double screenDiagonal;
+    /*
+    емкость аккумулятора.
+     */
     private int batteryCapacity;
 
 
@@ -24,6 +42,17 @@ public class Phone {
 
     public Phone(String manufacturer, String model, int memoryCapacity, String bodyColor,
           double screenDiagonal, int batteryCapacity){
+        if(manufacturer == null){
+            throw new IllegalArgumentException("manufacturer");
+        }
+
+        if(model == null){
+            throw new IllegalArgumentException("model");
+        }
+
+        if(bodyColor == null){
+            throw new IllegalArgumentException("bodyColor");
+        }
         this.manufacturer = manufacturer;
         this.model = model;
         this.memoryCapacity = memoryCapacity;

@@ -6,7 +6,11 @@ import java.util.List;
 public class RocketManagement {
     public static List<Rocket> rockets = new ArrayList<>();
 
+    /*
+    а) вывод списка ракет, с заданным количеством боеголовок и их количеством;
+     */
     public static void findRocketsByArmament(int countWarheads, int warheadPower){
+        System.out.printf("Ракеты с заданным количеством боеголовок и их количеством: %d, %d\n", countWarheads, warheadPower);
         for (Rocket r : rockets){
             if (r.getNumberOfWarheads() == countWarheads && r.getWarheadPower() == warheadPower){
                 r.show();
@@ -15,7 +19,11 @@ public class RocketManagement {
         }
     }
 
+    /*
+    б) вывод списка ракет, указанного производителя;
+     */
     public static void findRocketsByManufacturer(String manufacturer){
+        System.out.printf("Ракеты указанного производителя: %s\n", manufacturer);
         for (Rocket r : rockets){
             if (r.getManufacture().equalsIgnoreCase(manufacturer)){
                 r.show();
@@ -24,7 +32,11 @@ public class RocketManagement {
         }
     }
 
+    /*
+    в) вывод информации по ракетам, с дальностью больше указанной.
+     */
     public static void findRocketsWithRangeGreaterThan(int range){
+        System.out.printf("Ракеты с дальностью больше указанной: %d\n", range);
         for (Rocket r : rockets){
             if (r.getRange() > range){
                 r.show();

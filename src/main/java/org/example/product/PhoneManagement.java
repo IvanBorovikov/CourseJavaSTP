@@ -6,7 +6,11 @@ import java.util.List;
 public class PhoneManagement {
     public static List<Phone> phones = new ArrayList<>();
 
+    /*
+    а) вывод списка телефонов с заданным цветом корпуса;
+     */
     public static void findPhonesByColor(String color){
+        System.out.printf("Телефоны с заданным цветом корпуса: %s\n", color);
         for (Phone p : phones){
             if (p.getBodyColor().equalsIgnoreCase(color)){
                 p.show();
@@ -15,7 +19,11 @@ public class PhoneManagement {
         }
     }
 
+    /*
+    б) вывод списка телефонов заданного производителя с диагональю больше заданной;
+     */
     public static void findPhonesByBrandWithLargeScreen(String manufacturer, double diagonal){
+        System.out.printf("Телефоны заданного производителя с диагональю больше заданной: %s, %.2f\n", manufacturer,diagonal);
         for (Phone p : phones){
             if (p.getManufacture().equalsIgnoreCase(manufacturer) && p.getScreenDiagonal() > diagonal){
                 p.show();
@@ -24,7 +32,11 @@ public class PhoneManagement {
         }
     }
 
+    /*
+    в) вывод списка телефонов с емкостью аккумулятора больше заданной.
+     */
     public static void findPhonesWithBatteryCapacityGreaterThan(int battery){
+        System.out.printf("Телефоны с емкостью аккумулятора больше заданной: %d\n", battery);
         for (Phone p : phones){
             if (p.getBatteryCapacity() > battery){
                 p.show();

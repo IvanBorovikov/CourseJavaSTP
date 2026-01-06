@@ -1,10 +1,25 @@
 package org.example.product;
 
 public class Tire {
+    /*
+    Производитель
+     */
     private String manufacturer;
+    /*
+    тип покрышки(лето/зима)
+     */
     private boolean tireType;
+    /*
+    радиус
+     */
     private int radius;
+    /*
+   ожидаемый пробег
+     */
     private int expectedMileage;
+    /*
+    новая/бу.
+     */
     private boolean newOrBu;
 
     public Tire(){
@@ -21,6 +36,11 @@ public class Tire {
 
     public Tire(String manufacturer, boolean tireType, int radius,
          int expectedMileage, boolean newOrBu){
+
+        if(manufacturer == null){
+            throw new IllegalArgumentException("manufacturer");
+        }
+
         this.manufacturer = manufacturer;
         this.tireType = tireType;
         this.radius = radius;

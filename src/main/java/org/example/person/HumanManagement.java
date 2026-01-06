@@ -9,7 +9,7 @@ public class HumanManagement {
     а) вывод списка граждан, возраст которых превышает заданный;
      */
     public static void showExceedsTheSpecifiedAge(int age){
-        System.out.printf("Граждане, возраст которых превышает заданный: %d", age);
+        System.out.printf("Граждане, возраст которых превышает заданный: %d\n", age);
         for (Human h : humans){
             if (h.getAge() > age){
                 h.show();
@@ -22,7 +22,7 @@ public class HumanManagement {
     б) вывод списка граждан с высшим образованием;
      */
     public static void showHigherEducation(String education){
-        System.out.printf("Граждане с высшим образованием: %s", education);
+        System.out.printf("Граждане с высшим образованием: %s\n", education);
         for (Human h : humans){
             if (h.getEducation().equalsIgnoreCase(education)){
                 System.out.println();
@@ -35,7 +35,7 @@ public class HumanManagement {
     в) вывод списка граждан заданного пола.
      */
     public static void showGender(boolean male){
-        System.out.printf("Граждане с заданным полом: %b", male);
+        System.out.printf("Граждане с заданным полом: %b\n", male);
         for (Human h : humans){
             if(h.isMale() == male){
                 System.out.println();

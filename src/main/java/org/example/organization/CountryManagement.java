@@ -24,7 +24,7 @@ public class CountryManagement {
     б) вывод списка стран, с площадью меньше указанной;
      */
     public static void getCountriesByMaxArea(Long territory){
-        System.out.printf("Страны с площадью меньше указанного: %d", territory);
+        System.out.printf("Страны с площадью меньше указанного: %d\n", territory);
         for (Country c : countries){
             if (c.getAreaOfTerritory() < territory){
                 c.show();
@@ -37,6 +37,7 @@ public class CountryManagement {
     в) вывод фамилии президента страны с указанным количеством граждан.
      */
     public static void findPresidentLastNameByExactPopulation(Long count){
+        System.out.printf("Президент страны с указанным кол-ом граждан: %d", count);
         for (Country c : countries){
             if (c.getNumberOfCitizens().equals(count)){
                 System.out.printf("Президент страны с кол-ом граждан: %s", c.getLastNameOfPresident() + " - " + c.getNumberOfCitizens() + " млн.");
