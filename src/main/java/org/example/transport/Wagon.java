@@ -1,12 +1,33 @@
 package org.example.transport;
 
 public class Wagon {
+    /*
+    тип вагона
+     */
     private String typeOfCarriage;
+    /*
+    номер вагона
+     */
     private String numberOfTransport;
+    /*
+    число мест в вагоне
+     */
     private int numberSeats;
+    /*
+    фамилия проводника
+     */
     private String conductorName;
+    /*
+    номер поезда, к которому прикреплен вагон
+     */
     private String trainNumber;
+    /*
+     признак наличия кондиционера
+     */
     private boolean isConditioner;
+    /*
+    срок эксплуатации вагона.
+     */
     private int operationPeriod;
 
     public Wagon(){
@@ -25,6 +46,22 @@ public class Wagon {
 
     public Wagon(String typeOfCarriage, String numberOfTransport, int numberSeats, String conductorName,
           String trainNumber, boolean isConditioner, int operationPeriod){
+
+        if (typeOfCarriage == null){
+            throw new IllegalArgumentException("typeOfCarriage");
+        }
+
+        if (numberOfTransport == null){
+            throw new IllegalArgumentException("numberOfTransport");
+        }
+
+        if (conductorName == null){
+            throw new IllegalArgumentException("conductorName");
+        }
+
+        if (trainNumber == null){
+            throw new IllegalArgumentException("trainNumber");
+        }
         this.typeOfCarriage = typeOfCarriage;
         this.numberOfTransport = numberOfTransport;
         this.numberSeats = numberSeats;

@@ -1,12 +1,33 @@
 package org.example.transport;
 
 public class Train {
-    private String destination; // Пункт назначения
-    private String departurePoint; // Пункт отправления
+    /*
+    пункт назначения
+     */
+    private String destination;
+    /*
+    пункт отправления
+     */
+    private String departurePoint;
+    /*
+    номер поезда
+     */
     private String numberOfTransport;
+    /*
+    протяженность маршрута
+     */
     private int routeLength;
+    /*
+    число общих мест
+     */
     private int numberOfCommonPlaces;
+    /*
+    число купейных мест
+     */
     private int numberOfCompartments;
+    /*
+    число плацкартных мест.
+     */
     private int numberOfReservedSeats;
 
     public Train(){
@@ -26,7 +47,17 @@ public class Train {
     public Train(String departurePoint, String destination, String numberOfTransport,
           int routeLength, int numberOfCommonPlaces, int numberOfCompartments,
           int numberOfReservedSeats){
+        if (departurePoint == null){
+            throw new IllegalArgumentException("departurePoint");
+        }
 
+        if (destination == null){
+            throw new IllegalArgumentException("destination");
+        }
+
+        if (numberOfTransport == null){
+            throw new IllegalArgumentException("numberOfTransport");
+        }
         this.departurePoint = departurePoint;
         this.destination = destination;
         this.numberOfTransport = numberOfTransport;

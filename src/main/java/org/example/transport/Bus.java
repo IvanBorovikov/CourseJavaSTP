@@ -3,11 +3,29 @@ package org.example.transport;
 import java.time.Year;
 
 public class Bus {
+    /*
+    фамилия водителя
+     */
     private String lastNameDriver;
+    /*
+     номер автобуса
+     */
     private int numberOfTransport;
+    /*
+    номер маршрута
+     */
     private int routeNumber;
+    /*
+    марка
+     */
     private String stamp;
+    /*
+   год начала эксплуатации
+     */
     private int yearOfStartOfOperation;
+    /*
+     пробег.
+     */
     private int mileage;
 
     public Bus(){
@@ -25,6 +43,14 @@ public class Bus {
 
     public Bus(String lastNameDriver, int numberOfTransport, int routeNumber,
         String stamp, int yearOfStartOfOperation, int mileage){
+        if (lastNameDriver == null){
+            throw new IllegalArgumentException("lastNameDriver");
+        }
+
+        if (stamp == null){
+            throw new IllegalArgumentException("stamp");
+        }
+
         this.lastNameDriver = lastNameDriver;
         this.numberOfTransport = numberOfTransport;
         this.routeNumber = routeNumber;

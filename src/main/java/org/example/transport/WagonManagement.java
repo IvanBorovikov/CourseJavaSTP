@@ -6,7 +6,11 @@ import java.util.List;
 public class WagonManagement {
     public static List<Wagon> wagons = new ArrayList<>();
 
+    /*
+    а) вывод списка вагонов, находящихся в эксплуатации больше указанного количества лет;
+     */
     public static void findCarsInServiceLongerThan(int period){
+        System.out.printf("Вагоны находящиеся в эксплуатации больше указанного количества лет: %d\n", period);
         for (Wagon w : wagons){
             if (w.getOperationPeriod() > period){
                 w.show();
@@ -15,7 +19,11 @@ public class WagonManagement {
         }
     }
 
+    /*
+    б) вывод списка вагонов, закрепленных за проводником с заданной фамилией;
+     */
     public static void findCarsByConductorLastName(String lastName){
+        System.out.printf("Вагоны  закрепленных за проводником с заданной фамилией: %s\n", lastName);
         for (Wagon w : wagons){
             if (w.getConductorName().equalsIgnoreCase(lastName)){
                 w.show();
@@ -24,10 +32,13 @@ public class WagonManagement {
         }
     }
 
+    /*
+    в) вывод списка вагонов с кондиционером.
+     */
     public static void findCarsWithAirConditioning(){
-        boolean found = true;
+        System.out.println("Вагоны с кондиционером");
         for (Wagon w : wagons){
-            if (w.isConditioner() == found){
+            if (w.isConditioner()){
                 w.show();
                 System.out.println();
             }
