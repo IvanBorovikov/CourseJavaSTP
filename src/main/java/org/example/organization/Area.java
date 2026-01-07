@@ -2,7 +2,7 @@ package org.example.organization;
 
 import java.time.LocalDate;
 
-public class Organization {
+public class Area {
     protected String name;
     /*
     дата основания
@@ -10,16 +10,16 @@ public class Organization {
     protected LocalDate foundationYear;
     protected Long budget;
 
-    protected Organization(){
+    protected Area(){
     }
 
-    protected Organization(Organization organization){
-        this.name = organization.name;
-        this.foundationYear = organization.foundationYear;
-        this.budget = organization.budget;
+    protected Area(Area area){
+        this.name = area.name;
+        this.foundationYear = area.foundationYear;
+        this.budget = area.budget;
     }
 
-    protected Organization(String name, LocalDate foundationYear, Long budget){
+    protected Area(String name, LocalDate foundationYear, Long budget){
         if (name == null){
             throw new IllegalArgumentException("name");
         }

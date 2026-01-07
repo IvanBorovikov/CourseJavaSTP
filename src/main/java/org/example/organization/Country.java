@@ -2,7 +2,7 @@ package org.example.organization;
 
 import java.time.LocalDate;
 
-public class Country extends Organization {
+public class Country extends Area {
     /*
     Площадь территории
      */
@@ -16,18 +16,18 @@ public class Country extends Organization {
      */
     private String lastNameOfPresident;
 
-    Country(){
+    public Country(){
         super();
     }
 
-    Country(Country country){
+    public Country(Country country){
         super(country);
         this.areaOfTerritory = country.areaOfTerritory;
         this.numberOfCitizens = country.numberOfCitizens;
         this.lastNameOfPresident = country.lastNameOfPresident;
     }
 
-    Country(String name, Long areaOfTerritory, Long numberOfCitizens, Long budget, LocalDate foundationYear, String lastNameOfPresident){
+    public Country(String name, Long areaOfTerritory, Long numberOfCitizens, Long budget, LocalDate foundationYear, String lastNameOfPresident){
         super(name, foundationYear, budget);
         if (lastNameOfPresident == null){
             throw new IllegalArgumentException("lastNameOfPresident");

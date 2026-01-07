@@ -10,10 +10,10 @@ public class OrderTaxiManagement {
     /*
     а) вывод информации о заказах, по номеру машины;
      */
-    public static void getOrdersForVehicle(int numCar){
-        System.out.printf("Заказы по номеру машины: %d\n", numCar);
+    public static void getOrdersForVehicle(String numCar){
+        System.out.printf("Заказы по номеру машины: %s\n", numCar);
         for (OrderTaxi or : orderTaxis){
-            if (or.getNumberCar() == numCar){
+            if (or.getNumberCar().equalsIgnoreCase(numCar)){
                 or.show();
                 System.out.println();
             }
@@ -47,8 +47,8 @@ public class OrderTaxiManagement {
 
 
     public static void main(String[] args) {
-        orderTaxis.add(new OrderTaxi("Рожков", "Ул. Новосёлов", "Главный Вокзал", 233, 340.0, 2.2));
-        orderTaxis.add(new OrderTaxi("Гулан", "Ул. Пушкинская", "Галерея Чижова", 132, 460.0, 3.4));
+        orderTaxis.add(new OrderTaxi("Рожков", "Ул. Новосёлов", "Главный Вокзал", "A233BH", 340.0, 2000));
+        orderTaxis.add(new OrderTaxi("Гулан", "Ул. Пушкинская", "Галерея Чижова", "B132AC", 460.0, 3000));
         getAverageCheck();
     }
 }

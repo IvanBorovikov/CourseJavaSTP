@@ -2,7 +2,7 @@ package org.example.organization;
 
 import java.time.LocalDate;
 
-public class City extends Organization {
+public class City extends Area {
     /*
     количество жителей
      */
@@ -13,17 +13,17 @@ public class City extends Organization {
     private String lastNameOfGovernor;
 
 
-    City(){
+    public City(){
         super();
     }
 
-    City(City city){
+    public City(City city){
         super(city);
         this.numberOfInhabitants = city.numberOfInhabitants;
         this.lastNameOfGovernor = city.lastNameOfGovernor;
     }
 
-    City(String name, Long numberOfInhabitants, LocalDate foundationYear, String lastNameOfGovernor, Long budget){
+    public City(String name, Long numberOfInhabitants, LocalDate foundationYear, String lastNameOfGovernor, Long budget){
         super(name, foundationYear, budget);
         this.numberOfInhabitants = numberOfInhabitants;
         this.lastNameOfGovernor = lastNameOfGovernor;

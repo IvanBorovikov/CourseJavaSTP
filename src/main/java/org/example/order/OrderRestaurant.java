@@ -16,7 +16,7 @@ public class OrderRestaurant extends Order {
     /*
     Оплата наличными или по карте
      */
-    private boolean cashOrCard;
+    private PaymentType paymentType;
 
     public OrderRestaurant(){
         super();
@@ -27,11 +27,11 @@ public class OrderRestaurant extends Order {
         this.tableNumber = orderRestaurant.tableNumber;
         this.dishName = orderRestaurant.dishName;
         this.tipAmount = orderRestaurant.tipAmount;
-        this.cashOrCard = orderRestaurant.cashOrCard;
+        this.paymentType = orderRestaurant.paymentType;
     }
 
     public OrderRestaurant(String serviceProvider,  int tableNumber,
-                    String dishName, double cost, int tipAmount, boolean cashOrCard){
+                    String dishName, double cost, int tipAmount, PaymentType paymentType){
         super(serviceProvider, cost);
         if (dishName == null){
             throw new IllegalArgumentException("dishName");
@@ -39,8 +39,7 @@ public class OrderRestaurant extends Order {
         this.tableNumber = tableNumber;
         this.dishName = dishName;
         this.tipAmount = tipAmount;
-        this.cashOrCard = cashOrCard;
-
+        this.paymentType = paymentType;
     }
 
     public int getTableNumber() {
@@ -55,9 +54,10 @@ public class OrderRestaurant extends Order {
         return tipAmount;
     }
 
-    public boolean isCashOrCard() {
-        return cashOrCard;
+    public PaymentType getPaymentType() {
+        return paymentType;
     }
+
 
     public void setTableNumber(int tableNumber) {
         this.tableNumber = tableNumber;
@@ -71,9 +71,10 @@ public class OrderRestaurant extends Order {
         this.tipAmount = tipAmount;
     }
 
-    public void setCashOrCard(boolean cashOrCard) {
-        this.cashOrCard = cashOrCard;
+    public void setPaymentType(PaymentType paymentType) {
+        this.paymentType = paymentType;
     }
+
 
     public void show(){
         System.out.println("Фамилия официанта: " + serviceProvider);
@@ -81,6 +82,6 @@ public class OrderRestaurant extends Order {
         System.out.println("Блюдо: " + dishName);
         System.out.println("Стоимость: " + cost);
         System.out.println("Чаевые: " + tipAmount);
-        System.out.println("Оплата: " + (cashOrCard ? "Наличные" : "Карта"));
+        System.out.println("Оплата: " + paymentType.getType());
     }
 }

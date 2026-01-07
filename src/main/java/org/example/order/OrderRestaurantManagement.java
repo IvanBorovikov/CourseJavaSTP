@@ -39,7 +39,7 @@ public class OrderRestaurantManagement {
     public static void findCustomersWhoPreferCash(){
         System.out.println("Клиенты платящие наличными:");
         for (OrderRestaurant or : orderRestaurants){
-            if (or.isCashOrCard()){
+            if (or.getPaymentType() == PaymentType.CASH){
                 or.show();
                 System.out.println();
             }
@@ -47,8 +47,8 @@ public class OrderRestaurantManagement {
     }
 
     public static void main(String[] args) {
-        orderRestaurants.add(new OrderRestaurant("Лисицин", 2, "Лазанья", 450.0, 100, true));
-        orderRestaurants.add(new OrderRestaurant("Алипов", 4, "Картошка по деревенски", 300.0, 30, false));
+        orderRestaurants.add(new OrderRestaurant("Лисицин", 2, "Лазанья", 450.0, 100, PaymentType.CARD));
+        orderRestaurants.add(new OrderRestaurant("Алипов", 4, "Картошка по деревенски", 300.0, 30, PaymentType.CASH));
         findCustomersWhoPreferCash();
     }
 }

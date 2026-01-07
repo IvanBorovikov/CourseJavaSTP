@@ -1,4 +1,4 @@
-package org.example.organization;
+package org.example.footballteam;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -41,7 +41,7 @@ public class FootballTeamManagement {
     public static void findHistoricClubs(LocalDate year){
         System.out.println("Клуб до указанного года: " + year);
         for (FootballTeam f : footballTeams) {
-            if (!f.getFoundationYear().isAfter(year)) {
+            if (f.getFoundationYear().isBefore(year)) {
                 f.show();
                 System.out.println();
             }
