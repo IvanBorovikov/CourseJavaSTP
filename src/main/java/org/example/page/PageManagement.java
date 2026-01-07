@@ -22,12 +22,11 @@ public class PageManagement {
     /*
     б) вывод списка номеров страниц и количеств согласных букв на них;
      */
-    public static void getPageSummaryStatistics(int page){
+    public static void getPageSummaryStatistics(){
         for (Page p : pages){
-            if (p.getPageNumber() == page){
-                System.out.println("Номер страницы" + p.getPageNumber());
-                System.out.println("Кол-во гласных" + p.getNumberOfVowels());
-            }
+            System.out.println("Номер страницы: " + p.getPageNumber());
+            System.out.println("Кол-во гласных: " + p.getNumberOfVowels());
+            System.out.println("---------------------------");
         }
     }
 
@@ -46,6 +45,6 @@ public class PageManagement {
         pages.add(new Page(3850, 1620, 12, 8, 1, 48));
         pages.add(new Page(320, 135, 18, 3, 2, 12));
         pages.add(new Page(1150, 500, 14, 5, 3, 32));
-        calculateAverageLetterCountPerPage();
+        getPageSummaryStatistics();
     }
 }
