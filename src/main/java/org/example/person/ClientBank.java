@@ -5,7 +5,7 @@ public class ClientBank extends Person {
     /*
     номер банковского счета
      */
-    private int bankAccountNumber;
+    private String bankAccountNumber;
     /*
     количество денег на счете
      */
@@ -28,7 +28,7 @@ public class ClientBank extends Person {
     }
 
     public ClientBank(String lastName, String firstName, String middleName, String address,
-               String phone, int bankAccountNumber, double amountOfMoneyAccount,
+               String phone, String bankAccountNumber, double amountOfMoneyAccount,
                double overdraftLimit){
         super(lastName, firstName, middleName, address);
         this.phone = phone;
@@ -41,7 +41,7 @@ public class ClientBank extends Person {
         return phone;
     }
 
-    public int getBankAccountNumber() {
+    public String getBankAccountNumber() {
         return bankAccountNumber;
     }
 
@@ -57,7 +57,7 @@ public class ClientBank extends Person {
         this.phone = phone;
     }
 
-    public void setBankAccountNumber(int bankAccountNumber) {
+    public void setBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
     }
 

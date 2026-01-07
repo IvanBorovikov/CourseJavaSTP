@@ -8,10 +8,10 @@ public class PatientManagement {
     /*
     а) вывод списка пациентов, имеющих данный диагноз;
      */
-    public static void havingADiagnosis(String diagnosis1){
-        System.out.printf("Пациенты имеющих данный диагноз: %s\n", diagnosis1);
+    public static void havingADiagnosis(String diagnosis){
+        System.out.printf("Пациенты имеющих данный диагноз: %s\n", diagnosis);
         for (Patient p : patients){
-            if (p.getDiagnosis().equalsIgnoreCase(diagnosis1)){
+            if (p.getDiagnosis().equalsIgnoreCase(diagnosis)){
                 p.show();
                 System.out.println();
             }
@@ -27,6 +27,7 @@ public class PatientManagement {
             if (p.getMedicalCardNumber() == cardNum){
                 p.show();
                 System.out.println();
+                break;
             }
         }
     }
@@ -34,7 +35,7 @@ public class PatientManagement {
     /*
     в) вывод списка пациентов заданного лечащего врача.
      */
-    public static void theAttendingPhysician(String ownerDoctor){
+    public static void findAttendingPhysician(String ownerDoctor){
         System.out.printf("Пациенты заданного лечащего врача: %s\n", ownerDoctor);
         for (Patient p : patients){
             if (p.getLastNameOfTheAttendingPhysician().equalsIgnoreCase(ownerDoctor)){
@@ -51,6 +52,6 @@ public class PatientManagement {
         patients.add(new Patient("Пушкин", "Дмитрий", "Валерьевич", "ул. Шолохова", 1123, "Астма", "Глебов"));
         patients.add(new Patient("Хмеленко", "Илья", "Ильич", "ул. Солнечная", 1128, "Астма", "Глебов"));
         patients.add(new Patient("Шмыглев", "Юрий", "Олегович", "ул. Степная", 4321, "Отравление", "Тихонов"));
-        theAttendingPhysician("Глебов");
+        findAttendingPhysician("Глебов");
     }
 }

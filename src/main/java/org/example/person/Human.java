@@ -4,12 +4,12 @@ public class Human extends Person {
     /*
     Пол
      */
-    protected boolean male;
+    private Sex male;
     /*
     Образование
      */
-    protected String education;
-    protected int age;
+    private String education;
+    private int age;
 
 
 
@@ -19,7 +19,7 @@ public class Human extends Person {
 
 
     public Human(String lastName, String firstName, String middleName,
-                 String address, boolean male, String education, int age) {
+                 String address, Sex male, String education, int age) {
         super(lastName, firstName, middleName, address);
         if (education == null){
             throw new IllegalArgumentException("education");
@@ -39,7 +39,7 @@ public class Human extends Person {
     }
 
 
-    public boolean isMale() {
+    public Sex getMale() {
         return male;
     }
 
@@ -53,7 +53,7 @@ public class Human extends Person {
 
 
 
-    public void setMale(boolean male) {
+    public void setMale(Sex male) {
         this.male = male;
     }
 
@@ -68,7 +68,7 @@ public class Human extends Person {
     public void show() {
         System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);
         System.out.println("Адрес: " + address);
-        System.out.println("Пол: " + (male ? "Женский" : "Мужской"));
+        System.out.println("Пол: " + male.getGender());
         System.out.println("Образование: " + education);
         System.out.println("Возраст: " + age);
 

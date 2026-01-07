@@ -21,10 +21,10 @@ public class EmployeeManagement {
     /*
     б) вывод списка сотрудников, зарплата которых больше заданной;
      */
-    public static void SalaryHigherThanTheSetOne(double salary1){
-        System.out.printf("Сотрудники, зарплата которых больше заданной: %.2f\n", salary1);
+    public static void SalaryHigherThanTheSetOne(double salary){
+        System.out.printf("Сотрудники, зарплата которых больше заданной: %.2f\n", salary);
         for (Employee emp : employees){
-            if (emp.getSalary() > salary1){
+            if (emp.getSalary() > salary){
                 emp.show();
                 System.out.println();
             }
@@ -34,10 +34,10 @@ public class EmployeeManagement {
     /*
     в) вывод списка сотрудников, занимающих заданную должность.
      */
-    public static void currentPositions (String position1){
-        System.out.printf("Сотрудники, занимающих заданную должность: %s\n", position1);
+    public static void currentPositions (String position){
+        System.out.printf("Сотрудники, занимающих заданную должность: %s\n", position);
         for (Employee emp : employees){
-            if (emp.getPosition().equalsIgnoreCase(position1)){
+            if (emp.getPosition().equalsIgnoreCase(position)){
                 emp.show();
                 System.out.println();
             }

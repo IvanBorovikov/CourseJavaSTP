@@ -34,12 +34,12 @@ public class HumanManagement {
     /*
     в) вывод списка граждан заданного пола.
      */
-    public static void showGender(boolean male){
-        System.out.printf("Граждане с заданным полом: %b\n", male);
+    public static void showGender(Sex male){
+        System.out.printf("Граждане с заданным полом: %s\n", male.getGender());
         for (Human h : humans){
-            if(h.isMale() == male){
-                System.out.println();
+            if(h.getMale() == male){
                 h.show();
+                System.out.println();
             }
         }
     }
@@ -47,12 +47,12 @@ public class HumanManagement {
 
 
     public static void main(String[] args) {
-       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", false, "Высшее", 23));
-       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", false, "Среднее", 24));
-       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", true, "Среднее", 20));
-       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", true, "Среднее", 20));
+       humans.add(new Human("Зверева", "София", "Александровна", "ул. Северная", Sex.FEMALE, "Высшее", 23));
+       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Пушкинская", Sex.MALE, "Среднее", 24));
+       humans.add(new Human("Глебов", "Кирилл", "Русланович", "ул. Победы", Sex.MALE, "Среднее", 20));
+       humans.add(new Human("Теряев", "Максим", "Анатольевич", "ул. Степная", Sex.MALE, "Среднее", 20));
 
 
-       showGender(true);
+       showGender(Sex.MALE);
     }
 }
