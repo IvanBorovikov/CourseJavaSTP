@@ -9,10 +9,10 @@ public class RocketManagement {
     /*
     а) вывод списка ракет, с заданным количеством боеголовок и их количеством;
      */
-    public static void findRocketsByArmament(int countWarheads, int warheadPower){
-        System.out.printf("Ракеты с заданным количеством боеголовок и их количеством: %d, %d\n", countWarheads, warheadPower);
+    public static void findRocketsByArmament(int countWarheads){
+        System.out.printf("Ракеты с заданным количеством боеголовок и их количеством: %d\n", countWarheads);
         for (Rocket r : rockets){
-            if (r.getNumberOfWarheads() == countWarheads && r.getWarheadPower() == warheadPower){
+            if (r.getNumberOfWarheads() == countWarheads){
                 r.show();
                 System.out.println();
             }
