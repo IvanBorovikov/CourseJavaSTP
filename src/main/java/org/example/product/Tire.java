@@ -8,7 +8,7 @@ public class Tire {
     /*
     тип покрышки(лето/зима)
      */
-    private boolean tireType;
+    private TireType tireType;
     /*
     радиус
      */
@@ -20,7 +20,7 @@ public class Tire {
     /*
     новая/бу.
      */
-    private boolean newOrBu;
+    private TireQuality newOrBu;
 
     public Tire(){
 
@@ -34,9 +34,8 @@ public class Tire {
         this.newOrBu = tire.newOrBu;
     }
 
-    public Tire(String manufacturer, boolean tireType, int radius,
-         int expectedMileage, boolean newOrBu){
-
+    public Tire(String manufacturer, TireType tireType, int radius,
+         int expectedMileage, TireQuality newOrBu){
         if(manufacturer == null){
             throw new IllegalArgumentException("manufacturer");
         }
@@ -48,7 +47,7 @@ public class Tire {
         this.newOrBu = newOrBu;
     }
 
-    public boolean isTireType() {
+    public TireType getTireType() {
         return tireType;
     }
 
@@ -60,11 +59,11 @@ public class Tire {
         return expectedMileage;
     }
 
-    public boolean isNewOrBu() {
+    public TireQuality getNewOrBu() {
         return newOrBu;
     }
 
-    public void setTireType(boolean tireType) {
+    public void setTireType(TireType tireType) {
         this.tireType = tireType;
     }
 
@@ -72,7 +71,7 @@ public class Tire {
         this.radius = radius;
     }
 
-    public void setNewOrBu(boolean newOrBu) {
+    public void setNewOrBu(TireQuality newOrBu) {
         this.newOrBu = newOrBu;
     }
 
@@ -82,9 +81,9 @@ public class Tire {
 
     public void show(){
         System.out.println("Производитель: " + manufacturer);
-        System.out.println("Тип покрышки: " + (tireType ? "Лето" : "Зима"));
+        System.out.println("Тип покрышки: " + tireType.getType());
         System.out.println("Радиус: " + radius);
         System.out.println("Ожидаемый пробег: " + expectedMileage);
-        System.out.println("Новая или б/У: " + (newOrBu ? "Новая" : "б/у"));
+        System.out.println("Новая или б/У: " + newOrBu.getTypeQuality());
     }
 }
