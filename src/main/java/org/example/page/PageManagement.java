@@ -41,10 +41,10 @@ public class PageManagement {
         System.out.println("Среднее кол-во букв на странице: " + total / pages.size());
     }
 
-    public static void main(String[] args) {
-        pages.add(new Page(3850, 1620, 12, 8, 1, 48));
-        pages.add(new Page(320, 135, 18, 3, 2, 12));
-        pages.add(new Page(1150, 500, 14, 5, 3, 32));
-        getPageSummaryStatistics();
-    }
+//    public static void main(String[] args) {
+//        pages.add(new Page(3850, 1620, 12, 8, 1, 48));
+//        pages.add(new Page(320, 135, 18, 3, 2, 12));
+//        pages.add(new Page(1150, 500, 14, 5, 3, 32));
+//        getPageSummaryStatistics();
+//    }
 }

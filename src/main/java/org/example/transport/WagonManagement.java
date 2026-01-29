@@ -46,10 +46,10 @@ public class WagonManagement {
     }
 
 
-    public static void main(String[] args) {
-        wagons.add(new Wagon("Купейный", "09", 18, "Волкова", "002H", true, 7));
-        wagons.add(new Wagon("Плацкартный", "07", 54, "Иванов", "016A", false, 22));
-        wagons.add(new Wagon("Вагон-ресторан", "P-01", 48, "Петров", "002H", true, 15));
-        findCarsWithAirConditioning();
-    }
+//    public static void main(String[] args) {
+//        wagons.add(new Wagon("Купейный", "09", 18, "Волкова", "002H", true, 7));
+//        wagons.add(new Wagon("Плацкартный", "07", 54, "Иванов", "016A", false, 22));
+//        wagons.add(new Wagon("Вагон-ресторан", "P-01", 48, "Петров", "002H", true, 15));
+//        findCarsWithAirConditioning();
+//    }
 }

@@ -50,6 +50,5 @@ public class CountryManagement {
         countries.add(new Country("Россия", 17151442L, 146119928L, 36000000000000000L, LocalDate.of(862, 1, 1), "Путин"));
         countries.add(new Country("Франция", 551500L, 68605616L, 182508000L, LocalDate.of(843, 2, 2), "Макрон"));
 
-        findPresidentLastNameByExactPopulation(146119928L);
     }
 }

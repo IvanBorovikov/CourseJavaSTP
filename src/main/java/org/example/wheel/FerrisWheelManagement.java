@@ -32,9 +32,10 @@ public class FerrisWheelManagement {
         }
     }
 
-    public static void main(String[] args) {
-        ferrisWheels.add(new FerrisWheel("Москва-Сити 360", 140, 30, 48, "ГК \"Столичные парки\"", 2022));
-        ferrisWheels.add(new FerrisWheel("Небо Парк", 55, 15, 24, "ПКиО \"Зеленый остров\"", 1998));
-        ferrisWheels.add(new FerrisWheel("Карусель-Небо", 25, 8, 12, "ИП Сидоров", 2010));
-    }
+//    public static void main(String[] args) {
+//        ferrisWheels.add(new FerrisWheel("Москва-Сити 360", 140, 30, 48, "ГК \"Столичные парки\"", 2022));
+//        ferrisWheels.add(new FerrisWheel("Небо Парк", 55, 15, 24, "ПКиО \"Зеленый остров\"", 1998));
+//        ferrisWheels.add(new FerrisWheel("Карусель-Небо", 25, 8, 12, "ИП Сидоров", 2010));
+//
+//    }
 }

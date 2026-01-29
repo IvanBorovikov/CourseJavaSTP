@@ -52,13 +52,11 @@ public class ClientsBankManagement {
     }
 
 
-    public static void main(String[] args) {
-        clientsBanks.add(new ClientBank("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", "+7-999-989-99-99", "1", 1000.0, 5000.0));
-        clientsBanks.add(new ClientBank("Волков", "Андрей", "Алексеевич", "ул. Пушкинская", "+7-999-989-99-99", "2", 993.0, 5000.0));
-        clientsBanks.add(new ClientBank("Федоров", "Артем", "Андреевич", "ул. Тверская", "+7-999-989-99-99", "3", 800.0, 5000.0));
-        clientsBanks.add(new ClientBank("Лисицин", "Павел", "Александрович", "ул. Победы", "+7-999-989-99-99", "4", 800.0, 0.0));
-        //showCustomerInformation(2);
-        //showCustomersWithLessMoney(1000);
-        showWithoutAnOverdraft();
-    }
+//    public static void main(String[] args) {
+//        clientsBanks.add(new ClientBank("Боровиков", "Иван", "Алексеевич", "ул. Новосёлов", "+7-999-989-99-99", "1", 1000.0, 5000.0));
+//        clientsBanks.add(new ClientBank("Волков", "Андрей", "Алексеевич", "ул. Пушкинская", "+7-999-989-99-99", "2", 993.0, 5000.0));
+//        clientsBanks.add(new ClientBank("Федоров", "Артем", "Андреевич", "ул. Тверская", "+7-999-989-99-99", "3", 800.0, 5000.0));
+//        clientsBanks.add(new ClientBank("Лисицин", "Павел", "Александрович", "ул. Победы", "+7-999-989-99-99", "4", 800.0, 0.0));
+//
+//    }
 }

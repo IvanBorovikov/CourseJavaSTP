@@ -35,9 +35,10 @@ public class CityManagement {
     }
 
 
-    public static void main(String[] args) {
-        cities.add(new City("Москва", 13274285L, LocalDate.of(1147, 1, 2), "Собянин", 5000000000000L));
-        cities.add(new City("Ростов-на-Дону", 1143123L, LocalDate.of(1749, 2, 1), "Слюсарь ", 79000000000L));
-        cities.add(new City("Воронеж", 1143123L, LocalDate.of(1585, 3, 4), "Гусев ", 48000000000L));
-    }
+//    public static void main(String[] args) {
+//        cities.add(new City("Москва", 13274285L, LocalDate.of(1147, 1, 2), "Собянин", 5000000000000L));
+//        cities.add(new City("Ростов-на-Дону", 1143123L, LocalDate.of(1749, 2, 1), "Слюсарь ", 79000000000L));
+//        cities.add(new City("Воронеж", 1143123L, LocalDate.of(1585, 3, 4), "Гусев ", 48000000000L));
+//
+//    }
 }

@@ -1,7 +1,5 @@
 package org.example.transport;
 
-import java.time.Year;
-
 public class Bus {
     /*
     фамилия водителя

@@ -20,7 +20,7 @@ public class Tire {
     /*
     новая/бу.
      */
-    private TireQuality newOrBu;
+    private TireCondition newOrBu;
 
     public Tire(){
 
@@ -35,7 +35,7 @@ public class Tire {
     }
 
     public Tire(String manufacturer, TireType tireType, int radius,
-         int expectedMileage, TireQuality newOrBu){
+         int expectedMileage, TireCondition newOrBu){
         if(manufacturer == null){
             throw new IllegalArgumentException("manufacturer");
         }
@@ -59,7 +59,7 @@ public class Tire {
         return expectedMileage;
     }
 
-    public TireQuality getNewOrBu() {
+    public TireCondition getNewOrBu() {
         return newOrBu;
     }
 
@@ -71,7 +71,7 @@ public class Tire {
         this.radius = radius;
     }
 
-    public void setNewOrBu(TireQuality newOrBu) {
+    public void setNewOrBu(TireCondition newOrBu) {
         this.newOrBu = newOrBu;
     }
 

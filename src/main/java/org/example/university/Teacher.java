@@ -17,11 +17,11 @@ public class Teacher {
      */
     private String object;
 
-    Teacher(){
+    public Teacher(){
 
     }
 
-    Teacher(Teacher teacher){
+    public Teacher(Teacher teacher){
         this.lastName = teacher.lastName;
         this.firstName = teacher.firstName;
         this.middleName = teacher.middleName;
@@ -30,7 +30,7 @@ public class Teacher {
         this.object = teacher.object;
     }
 
-    Teacher(String lastName, String firstName, String middleName, String post,
+    public Teacher(String lastName, String firstName, String middleName, String post,
             String department, String object){
         if (lastName == null){
             throw new IllegalArgumentException("lastName");

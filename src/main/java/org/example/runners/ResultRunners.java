@@ -19,7 +19,7 @@ public class ResultRunners {
     /*
     результат.
      */
-    private LocalTime result;
+    private int result;
 
     public ResultRunners(){
 
@@ -34,7 +34,7 @@ public class ResultRunners {
     }
 
     public ResultRunners(String lastNameOfTheAthlete, String country, int age, double raceDistance,
-                         LocalTime result){
+                         int result){
         if (lastNameOfTheAthlete == null){
             throw new IllegalArgumentException("lastNameOfTheAthlete");
         }
@@ -65,7 +65,7 @@ public class ResultRunners {
         return raceDistance;
     }
 
-    public LocalTime getResult() {
+    public int getResult() {
         return result;
     }
 
@@ -85,7 +85,7 @@ public class ResultRunners {
         this.raceDistance = raceDistance;
     }
 
-    public void setResult(LocalTime result) {
+    public void setResult(int result) {
         this.result = result;
     }
 

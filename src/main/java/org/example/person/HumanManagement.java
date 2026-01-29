@@ -46,13 +46,11 @@ public class HumanManagement {
 
 
 
-    public static void main(String[] args) {
-       humans.add(new Human("Зверева", "София", "Александровна", "ул. Северная", Sex.FEMALE, "Высшее", 23));
-       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Пушкинская", Sex.MALE, "Среднее", 24));
-       humans.add(new Human("Глебов", "Кирилл", "Русланович", "ул. Победы", Sex.MALE, "Среднее", 20));
-       humans.add(new Human("Теряев", "Максим", "Анатольевич", "ул. Степная", Sex.MALE, "Среднее", 20));
-
-
-       showGender(Sex.MALE);
-    }
+//    public static void main(String[] args) {
+//       humans.add(new Human("Зверева", "София", "Александровна", "ул. Северная", Sex.FEMALE, "Высшее", 23));
+//       humans.add(new Human("Боровиков", "Иван", "Алексеевич", "ул. Пушкинская", Sex.MALE, "Среднее", 24));
+//       humans.add(new Human("Глебов", "Кирилл", "Русланович", "ул. Победы", Sex.MALE, "Среднее", 20));
+//       humans.add(new Human("Теряев", "Максим", "Анатольевич", "ул. Степная", Sex.MALE, "Среднее", 20));
+//
+//    }
 }

@@ -49,6 +49,6 @@ public class OrderTaxiManagement {
     public static void main(String[] args) {
         orderTaxis.add(new OrderTaxi("Рожков", "Ул. Новосёлов", "Главный Вокзал", "A233BH", 340.0, 2000));
         orderTaxis.add(new OrderTaxi("Гулан", "Ул. Пушкинская", "Галерея Чижова", "B132AC", 460.0, 3000));
-        getAverageCheck();
+
     }
 }

@@ -34,7 +34,7 @@ public class Employee {
     }
 
     public Employee(String lastName, String firstName, String middleName, String position,
-             String department, int yearOfEmployment, int salary){
+             String department, int yearOfEmployment, double salary){
         if (lastName == null){
             throw new IllegalArgumentException("lastName");
         }

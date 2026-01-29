@@ -9,7 +9,7 @@ public class TrainManagement {
     /*
     а) вывод списка поездов, следующих до заданного пункта назначения;
      */
-    public void findTrainsByDestination(String destination){
+    public static void findTrainsByDestination(String destination){
         System.out.printf("Поезда до заданного пункта назначения: %s\n", destination);
         for (Train t : trains){
             if (t.getDestination().equalsIgnoreCase(destination)){
@@ -23,7 +23,7 @@ public class TrainManagement {
     /*
     б) вывод общего числа мест в поезде с заданным номером;
      */
-    public void calculateTotalSeatsByTrainNumber(String num){
+    public static void calculateTotalSeatsByTrainNumber(String num){
         System.out.printf("Вывод общего числа мест в поезде с заданным номером: %s\n", num);
         for (Train t : trains){
             if (t.getNumberOfTransport().equalsIgnoreCase(num)){
@@ -37,7 +37,7 @@ public class TrainManagement {
     /*
     в) вывод списка поездов, с протяженностью маршрута больше заданной
      */
-    public void findTrainsWithRouteLengthGreaterThan(int route){
+    public static void findTrainsWithRouteLengthGreaterThan(int route){
         System.out.printf("Поезда с протяженностью маршрута больше заданной: %d\n", route);
         for (Train t : trains){
             if (t.getRouteLength() > route){
@@ -48,8 +48,8 @@ public class TrainManagement {
     }
 
 
-    public static void main(String[] args) {
-        trains.add(new Train("Москва", "Владивосток", "002H", 9302, 0, 264, 0));
-        trains.add(new Train("Санкт-Петербург", "Мурманск", "016A", 1448, 58, 108, 162));
-    }
+//    public static void main(String[] args) {
+//        trains.add(new Train("Москва", "Владивосток", "002H", 9302, 0, 264, 0));
+//        trains.add(new Train("Санкт-Петербург", "Мурманск", "016A", 1448, 58, 108, 162));
+//    }
 }

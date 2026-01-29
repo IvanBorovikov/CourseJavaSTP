@@ -40,9 +40,8 @@ public class ApartmentManagement {
         double total;
         for (Apartment a : apartments){
             if (a.getApartmentNumber() == apartment){
-                total = (a.getTotalArea() + a.getLivingArea()) / 2;
-                System.out.println("Номер квартиры: " + a.getApartmentNumber());
-                System.out.println("Средняя площадь: " + total);
+                total = a.getLivingArea() / a.getNumberOfRooms();
+                System.out.println("Средняя площадь комнаты: " + total);
             }
 
         }

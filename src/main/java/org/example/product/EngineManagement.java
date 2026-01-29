@@ -47,11 +47,11 @@ public class EngineManagement {
 
     }
 
-    public static void main(String[] args) {
-        engines.add(new Engine("Toyota", 99.0, 1.33, true, 16, 4));
-        engines.add(new Engine("Cummins", 360.0, 6.7, false, 24, 6));
-        engines.add(new Engine("Ferrari", 800.0, 6.5, true, 48, 12));
-
-        findEnginesByValvesAndCylinders(16, 4);
-    }
+//    public static void main(String[] args) {
+//        engines.add(new Engine("Toyota", 99.0, 1.33, true, 16, 4));
+//        engines.add(new Engine("Cummins", 360.0, 6.7, false, 24, 6));
+//        engines.add(new Engine("Ferrari", 800.0, 6.5, true, 48, 12));
+//
+//        findEnginesByValvesAndCylinders(16, 4);
+//    }
 }

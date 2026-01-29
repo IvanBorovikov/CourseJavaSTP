@@ -1,32 +1,35 @@
 package org.example.university;
 
 import org.example.person.Person;
-
 import java.time.LocalDate;
 
-
-
 public class Student extends Person {
+
+
     /*
-    факультет
-     */
-    private String faculty;
-    /*
-    курс
-     */
-    private int course;
-    /*
-    Иногородний
-     */
-    private boolean resident;
-    /*
-    Телефон
-     */
-    private String phone;
-    /*
-    дата рождения
+     * Дата рождения
      */
     private LocalDate dateOfBirth;
+
+    /*
+     * Телефон
+     */
+    private String phone;
+
+    /*
+     * Факультет
+     */
+    private String faculty;
+
+    /*
+     * Курс
+     */
+    private int course;
+
+    /*
+     * Иногородний или нет
+     */
+    private boolean resident;
 
     public Student() {
         super();
@@ -35,31 +38,43 @@ public class Student extends Person {
     public Student(Student s) {
         super(s);
         this.dateOfBirth = s.dateOfBirth;
+        this.phone = s.phone;
         this.faculty = s.faculty;
         this.course = s.course;
         this.resident = s.resident;
-        this.phone = s.phone;
     }
 
     public Student(String lastName, String firstName, String middleName,
-                   LocalDate dateOfBirth, String address, String phone,
+                   String address,
+                   LocalDate dateOfBirth, String phone,
                    String faculty, int course, boolean resident) {
+
         super(lastName, firstName, middleName, address);
-        if (phone == null){
+
+        if (phone == null) {
             throw new IllegalArgumentException("phone");
         }
 
-        if (faculty == null){
+        if (faculty == null) {
             throw new IllegalArgumentException("faculty");
         }
+
         this.dateOfBirth = dateOfBirth;
+        this.phone = phone;
         this.faculty = faculty;
         this.course = course;
         this.resident = resident;
-        this.phone = phone;
     }
 
 
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
 
     public String getFaculty() {
         return faculty;
@@ -69,12 +84,18 @@ public class Student extends Person {
         return course;
     }
 
-    public boolean getResident() {
+    public boolean isResident() {
         return resident;
     }
 
-    public String getPhone() {
-        return phone;
+
+
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setFaculty(String faculty) {
@@ -85,21 +106,21 @@ public class Student extends Person {
         this.course = course;
     }
 
-    public void setNonresident(boolean resident) {
+    public void setResident(boolean resident) {
         this.resident = resident;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+
 
     public void show() {
-        System.out.println("ФИО: " + lastName + " " + firstName + " " + middleName);
+        System.out.println("Фамилия: " + lastName);
+        System.out.println("Имя: " + firstName);
+        System.out.println("Отчество: " + middleName);
+        System.out.println("Адрес: " + address);
+        System.out.println("Дата рождения: " + dateOfBirth);
+        System.out.println("Телефон: " + phone);
         System.out.println("Факультет: " + faculty);
         System.out.println("Курс: " + course);
-        System.out.println("Телефон: " + phone);
-        System.out.println("Дата рождения: " + dateOfBirth);
-        System.out.println("Иногородний: " + (resident ? "Нет" : "Да"));
+        System.out.println("Иногородний: " + (resident ? "Да" : "Нет"));
     }
-
 }

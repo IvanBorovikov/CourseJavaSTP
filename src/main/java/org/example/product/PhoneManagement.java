@@ -46,9 +46,10 @@ public class PhoneManagement {
 
     }
 
-    public static void main(String[] args) {
-        phones.add(new Phone("Apple", "iPhone 15 Pro Max", 512, "Титан чёрный", 6.7, 4422));
-        phones.add(new Phone("Samsung", "Galaxy A54 5G", 128, "Лаймовый", 6.4, 5000));
-        phones.add(new Phone("Google", "Pixel 7a", 128, "Угольно-серый", 6.1, 4300));
-    }
+//    public static void main(String[] args) {
+//        phones.add(new Phone("Apple", "iPhone 15 Pro Max", 512, "Титан чёрный", 6.7, 4422));
+//        phones.add(new Phone("Samsung", "Galaxy A54 5G", 128, "Лаймовый", 6.4, 5000));
+//        phones.add(new Phone("Google", "Pixel 7a", 128, "Угольно-серый", 6.1, 4300));
+//
+//    }
 }

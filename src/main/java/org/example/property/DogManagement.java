@@ -45,9 +45,10 @@ public class DogManagement {
         }
     }
 
-    public static void main(String[] args) {
-        dogs.add(new Dog("Барон",  "Лабрадор-ретривер", 32.0, "Кузнецов", "Палевый", true, 58, 4));
-        dogs.add(new Dog("Лакки",  "Той-пудель", 3.2, "Соколова", "Белый", false, 24, 1));
-        dogs.add(new Dog("Арес",  "Немецкая овчарка", 42.2, "Иванов", "Чепрачный", true, 65, 6));
-    }
+//    public static void main(String[] args) {
+//        dogs.add(new Dog("Барон",  "Лабрадор-ретривер", 32.0, "Кузнецов", "Палевый", true, 58, 4));
+//        dogs.add(new Dog("Лакки",  "Той-пудель", 3.2, "Соколова", "Белый", false, 24, 1));
+//        dogs.add(new Dog("Арес",  "Немецкая овчарка", 42.2, "Иванов", "Чепрачный", true, 65, 6));
+//
+//    }
 }

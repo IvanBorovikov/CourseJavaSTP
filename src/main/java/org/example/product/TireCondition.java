@@ -1,12 +1,12 @@
 package org.example.product;
 
-public enum TireQuality {
+public enum TireCondition {
     NEW("Новая"),
-    BU("Б/у");
+    USED("Б/у");
 
     private final String typeQuality;
 
-    TireQuality(String typeQuality){
+    TireCondition(String typeQuality){
         this.typeQuality = typeQuality;
     }
 

@@ -49,5 +49,6 @@ public class RocketManagement {
         rockets.add(new Rocket("Государственный ракетный центр «Южный»", 2500, 11000, 200, 10, 550));
         rockets.add(new Rocket("КБ «Точность»", 800, 2500, 30, 1, 120));
         rockets.add(new Rocket("Завод «Молния»", 150, 120, 10, 1, 50));
+
     }
 }
